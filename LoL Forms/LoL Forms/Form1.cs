@@ -20,7 +20,7 @@ namespace LoL_Forms
             string connectionString = "Server=bdadmin.database.windows.net;Database=LoLDatabase;User Id=bdadmin;Password=Password2023;";
 
             connection = new SqlConnection(connectionString);
-            connection.Open();
+             connection.Open();
 
             // Fetch data from the database and bind it to form controls
             LoadChampions();
@@ -48,6 +48,11 @@ namespace LoL_Forms
 
         private void comboBoxChampions_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void runButton_Click(object sender, EventArgs e)
+        {
+            Console.Write("CHEGOU A FUNÇAO");
             // Retrieve the selected champion from the dropdown
             string selectedChampion = comboBoxChampions.SelectedItem.ToString();
 
@@ -65,5 +70,7 @@ namespace LoL_Forms
 
             reader.Close();
         }
+
+        
     }
 }
