@@ -19,7 +19,7 @@ namespace LoL_Forms
             
             InitializeComponent();
             region_name = region;
-            changeBackground(region_name);
+            //changeBackground(region_name);
         }
 
         private void Selected_Region_Load(object sender, EventArgs e)
@@ -58,7 +58,10 @@ namespace LoL_Forms
                     {
                         // Set the background image of the form
                         this.BackgroundImage = Image.FromStream(stream);
+                        stream.Close();
                     }
+                    webClient.Dispose();
+                    imageData = null;
                 }
             }
 

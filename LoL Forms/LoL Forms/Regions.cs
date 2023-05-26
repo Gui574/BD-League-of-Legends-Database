@@ -106,7 +106,7 @@ namespace LoL_Forms
                             Zaun.SizeMode = PictureBoxSizeMode.StretchImage;
                         }
                     }
-                    reader.Close();
+
                 }
 
             }
