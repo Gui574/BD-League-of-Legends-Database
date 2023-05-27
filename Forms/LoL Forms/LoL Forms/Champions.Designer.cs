@@ -176,7 +176,7 @@
             this.champName.Size = new System.Drawing.Size(185, 25);
             this.champName.TabIndex = 11;
             this.champName.Text = "";
-            this.champName.TextChanged += new System.EventHandler(this.champName_TextChanged);
+           // this.champName.TextChanged += new System.EventHandler(this.champName_TextChanged);
             // 
             // label5
             // 
@@ -186,7 +186,7 @@
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Name";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -221,7 +221,7 @@
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 16;
             this.label7.Text = "Gender";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+          //  this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // champRegion
             // 
@@ -239,7 +239,7 @@
             this.label8.Size = new System.Drawing.Size(44, 15);
             this.label8.TabIndex = 18;
             this.label8.Text = "Region";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+          //  this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // champQuote
             // 
@@ -257,7 +257,7 @@
             this.label9.Size = new System.Drawing.Size(40, 15);
             this.label9.TabIndex = 20;
             this.label9.Text = "Quote";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+          //  this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // champRelease
             // 

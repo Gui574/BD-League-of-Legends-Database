@@ -15,6 +15,22 @@ namespace LoL_Forms
         public Stories()
         {
             InitializeComponent();
+            // Set the form border style to FixedSingle
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            // Disable the maximize button
+            this.MaximizeBox = false;
+            // Disable the minimize button
+            //this.MinimizeBox = false;
+        }
+
+        private void Stories_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

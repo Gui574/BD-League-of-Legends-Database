@@ -144,30 +144,7 @@ namespace LoL_Forms
             reader.Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void champName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void resetButton_Click(object sender, EventArgs e)
         {
@@ -179,6 +156,18 @@ namespace LoL_Forms
             champRegion.Text = string.Empty;
             champRelease.Text = string.Empty;
             champSpecies.Text = string.Empty;
+            comboBoxChampions.SelectedItem = null;
+            QDesc.Text = string.Empty; 
+            QName.Text = string.Empty;
+            WDesc.Text = string.Empty;
+            WName.Text = string.Empty;
+            WDesc.Text = string.Empty;
+            EDesc.Text = string.Empty;
+            EName.Text = string.Empty;
+            RName.Text = string.Empty;
+            RDesc.Text = string.Empty;
+            PName.Text = string.Empty;
+            PDesc.Text = string.Empty;
 
         }
 
