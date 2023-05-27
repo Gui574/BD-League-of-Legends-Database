@@ -94,11 +94,12 @@ namespace LoL_Forms
 
         private void fillFields(String selectedChampion)
         {
-            
+
 
             // Query the database to fetch additional information about the selected champion
-            string query = $"SELECT releaseDate,quote,splashArt,region_name, description, Gender, Species FROM Champion WHERE Name = '{selectedChampion}'";
+            string query = "SELECT releaseDate, quote, splashArt, region_name, description, Gender, Species FROM Champion WHERE Name = @ChampionName";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.GetConnection());
+            command.Parameters.AddWithValue("@ChampionName", selectedChampion);
             SqlDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -123,8 +124,9 @@ namespace LoL_Forms
             reader.Close();
 
             
-            query = $"SELECT P_name,P_description,Q_name,Q_description,W_name,W_description,E_name,E_description,R_name,R_description FROM Abilities WHERE champion_name = '{selectedChampion}'";
+            query = $"SELECT P_name,P_description,Q_name,Q_description,W_name,W_description,E_name,E_description,R_name,R_description FROM Abilities WHERE champion_name = @ChampionName";
             command = new SqlCommand(query, DatabaseConnection.GetConnection());
+            command.Parameters.AddWithValue("@ChampionName", selectedChampion);
             reader = command.ExecuteReader();
             if (reader.Read())
             {
