@@ -1,5 +1,0 @@
-
-DROP DATABASE LoLDatabase;
-GO
-CREATE DATABASE LoLDatabase;
-GO
