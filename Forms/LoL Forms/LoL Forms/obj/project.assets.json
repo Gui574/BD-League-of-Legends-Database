@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
+      "projectUniqueName": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\Forms\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
       "projectName": "LoL Forms",
-      "projectPath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
+      "projectPath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\Forms\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
       "packagesPath": "C:\\Users\\guiml\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\LoL Forms\\LoL Forms\\obj\\",
+      "outputPath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\Forms\\LoL Forms\\LoL Forms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\guiml\\AppData\\Roaming\\NuGet\\NuGet.Config",

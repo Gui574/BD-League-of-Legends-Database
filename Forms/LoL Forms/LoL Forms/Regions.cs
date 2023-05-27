@@ -25,7 +25,7 @@ namespace LoL_Forms
             {
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         string name = reader["name"].ToString();
                         if (name == "Bandle City")

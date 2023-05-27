@@ -48,3 +48,31 @@ C:\Users\guiml\Desktop\BD-League-of-Legends-Database\LoL Forms\LoL Forms\obj\Deb
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Champions.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Regions.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Selected_Region.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\LoL Forms.exe
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\LoL Forms.deps.json
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\LoL Forms.runtimeconfig.json
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\LoL Forms.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\LoL Forms.pdb
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.csproj.AssemblyReference.cache
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Champions.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Regions.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Selected_Region.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.csproj.GenerateResource.cache
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.AssemblyInfoInputs.cache
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.AssemblyInfo.cs
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.csproj.CoreCompileInputs.cache
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.csproj.CopyComplete
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\refint\LoL Forms.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.pdb
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL Forms.genruntimeconfig.cache
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\ref\LoL Forms.dll
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.HomePage.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Stories.resources

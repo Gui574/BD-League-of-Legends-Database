@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GkoXcDTxVW2Kt3pIeippfiNBVDoYI0rnwhEp3aPhy4+pPcmU1hbwt5z9SsP14W/zmFL/uSdgKTJOL0OQhwsFDA==",
+  "dgSpecHash": "f1x5rxyhJXG1oFLOGfpaPLasjrcP0CEdxe4vePIiYsPAj7tmcE1XX+OomX9xslcklvahm4HQb9tcxp7vaz5yEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
+  "projectFilePath": "C:\\Users\\guiml\\Desktop\\BD-League-of-Legends-Database\\Forms\\LoL Forms\\LoL Forms\\LoL Forms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guiml\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\guiml\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
