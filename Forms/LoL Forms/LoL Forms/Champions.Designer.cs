@@ -51,21 +51,6 @@
             this.champRelease = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
-            this.Female = new System.Windows.Forms.CheckBox();
-            this.Male = new System.Windows.Forms.CheckBox();
-            this.Zaun = new System.Windows.Forms.CheckBox();
-            this.Void = new System.Windows.Forms.CheckBox();
-            this.Freljord = new System.Windows.Forms.CheckBox();
-            this.Targon = new System.Windows.Forms.CheckBox();
-            this.Shurima = new System.Windows.Forms.CheckBox();
-            this.ShadowIsles = new System.Windows.Forms.CheckBox();
-            this.Noxus = new System.Windows.Forms.CheckBox();
-            this.Piltover = new System.Windows.Forms.CheckBox();
-            this.Ixtal = new System.Windows.Forms.CheckBox();
-            this.Ionia = new System.Windows.Forms.CheckBox();
-            this.Demacia = new System.Windows.Forms.CheckBox();
-            this.Bilgewater = new System.Windows.Forms.CheckBox();
-            this.BandleCity = new System.Windows.Forms.CheckBox();
             this.QDesc = new System.Windows.Forms.RichTextBox();
             this.WDesc = new System.Windows.Forms.RichTextBox();
             this.EDesc = new System.Windows.Forms.RichTextBox();
@@ -82,8 +67,27 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.PName = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Noxus = new System.Windows.Forms.RadioButton();
+            this.Bilgewater = new System.Windows.Forms.RadioButton();
+            this.Piltover = new System.Windows.Forms.RadioButton();
+            this.BandleCity = new System.Windows.Forms.RadioButton();
+            this.Zaun = new System.Windows.Forms.RadioButton();
+            this.Void = new System.Windows.Forms.RadioButton();
+            this.Freljord = new System.Windows.Forms.RadioButton();
+            this.ShadowIsles = new System.Windows.Forms.RadioButton();
+            this.Targon = new System.Windows.Forms.RadioButton();
+            this.Shurima = new System.Windows.Forms.RadioButton();
+            this.Ixtal = new System.Windows.Forms.RadioButton();
+            this.Ionia = new System.Windows.Forms.RadioButton();
+            this.Demacia = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Female = new System.Windows.Forms.RadioButton();
+            this.Male = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champImage)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -176,7 +180,6 @@
             this.champName.Size = new System.Drawing.Size(185, 25);
             this.champName.TabIndex = 11;
             this.champName.Text = "";
-           // this.champName.TextChanged += new System.EventHandler(this.champName_TextChanged);
             // 
             // label5
             // 
@@ -186,7 +189,6 @@
             this.label5.Size = new System.Drawing.Size(39, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Name";
-            //this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -221,7 +223,6 @@
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 16;
             this.label7.Text = "Gender";
-          //  this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // champRegion
             // 
@@ -239,7 +240,6 @@
             this.label8.Size = new System.Drawing.Size(44, 15);
             this.label8.TabIndex = 18;
             this.label8.Text = "Region";
-          //  this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // champQuote
             // 
@@ -257,7 +257,6 @@
             this.label9.Size = new System.Drawing.Size(40, 15);
             this.label9.TabIndex = 20;
             this.label9.Text = "Quote";
-          //  this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // champRelease
             // 
@@ -285,171 +284,6 @@
             this.resetButton.Text = "Reset Fields";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
-            // 
-            // Female
-            // 
-            this.Female.AutoSize = true;
-            this.Female.Location = new System.Drawing.Point(997, 12);
-            this.Female.Name = "Female";
-            this.Female.Size = new System.Drawing.Size(64, 19);
-            this.Female.TabIndex = 42;
-            this.Female.Text = "Female";
-            this.Female.UseVisualStyleBackColor = true;
-            this.Female.CheckedChanged += new System.EventHandler(this.Female_CheckedChanged);
-            // 
-            // Male
-            // 
-            this.Male.AutoSize = true;
-            this.Male.Location = new System.Drawing.Point(1119, 12);
-            this.Male.Name = "Male";
-            this.Male.Size = new System.Drawing.Size(52, 19);
-            this.Male.TabIndex = 43;
-            this.Male.Text = "Male";
-            this.Male.UseVisualStyleBackColor = true;
-            this.Male.CheckedChanged += new System.EventHandler(this.Male_CheckedChanged);
-            // 
-            // Zaun
-            // 
-            this.Zaun.AutoSize = true;
-            this.Zaun.Location = new System.Drawing.Point(1119, 87);
-            this.Zaun.Name = "Zaun";
-            this.Zaun.Size = new System.Drawing.Size(53, 19);
-            this.Zaun.TabIndex = 44;
-            this.Zaun.Text = "Zaun";
-            this.Zaun.UseVisualStyleBackColor = true;
-            this.Zaun.CheckedChanged += new System.EventHandler(this.Zaun_CheckedChanged);
-            // 
-            // Void
-            // 
-            this.Void.AutoSize = true;
-            this.Void.Location = new System.Drawing.Point(997, 187);
-            this.Void.Name = "Void";
-            this.Void.Size = new System.Drawing.Size(49, 19);
-            this.Void.TabIndex = 45;
-            this.Void.Text = "Void";
-            this.Void.UseVisualStyleBackColor = true;
-            this.Void.CheckedChanged += new System.EventHandler(this.Void_CheckedChanged);
-            // 
-            // Freljord
-            // 
-            this.Freljord.AutoSize = true;
-            this.Freljord.Location = new System.Drawing.Point(1119, 162);
-            this.Freljord.Name = "Freljord";
-            this.Freljord.Size = new System.Drawing.Size(66, 19);
-            this.Freljord.TabIndex = 46;
-            this.Freljord.Text = "Freljord";
-            this.Freljord.UseVisualStyleBackColor = true;
-            this.Freljord.CheckedChanged += new System.EventHandler(this.Freljord_CheckedChanged);
-            // 
-            // Targon
-            // 
-            this.Targon.AutoSize = true;
-            this.Targon.Location = new System.Drawing.Point(1119, 137);
-            this.Targon.Name = "Targon";
-            this.Targon.Size = new System.Drawing.Size(62, 19);
-            this.Targon.TabIndex = 47;
-            this.Targon.Text = "Targon";
-            this.Targon.UseVisualStyleBackColor = true;
-            this.Targon.CheckedChanged += new System.EventHandler(this.Targon_CheckedChanged);
-            // 
-            // Shurima
-            // 
-            this.Shurima.AutoSize = true;
-            this.Shurima.Location = new System.Drawing.Point(997, 137);
-            this.Shurima.Name = "Shurima";
-            this.Shurima.Size = new System.Drawing.Size(70, 19);
-            this.Shurima.TabIndex = 48;
-            this.Shurima.Text = "Shurima";
-            this.Shurima.UseVisualStyleBackColor = true;
-            this.Shurima.CheckedChanged += new System.EventHandler(this.Shurima_CheckedChanged);
-            // 
-            // ShadowIsles
-            // 
-            this.ShadowIsles.AutoSize = true;
-            this.ShadowIsles.Location = new System.Drawing.Point(1119, 112);
-            this.ShadowIsles.Name = "ShadowIsles";
-            this.ShadowIsles.Size = new System.Drawing.Size(90, 19);
-            this.ShadowIsles.TabIndex = 49;
-            this.ShadowIsles.Text = "ShadowIsles";
-            this.ShadowIsles.UseVisualStyleBackColor = true;
-            this.ShadowIsles.CheckedChanged += new System.EventHandler(this.ShadowIsles_CheckedChanged);
-            // 
-            // Noxus
-            // 
-            this.Noxus.AutoSize = true;
-            this.Noxus.Location = new System.Drawing.Point(997, 62);
-            this.Noxus.Name = "Noxus";
-            this.Noxus.Size = new System.Drawing.Size(60, 19);
-            this.Noxus.TabIndex = 50;
-            this.Noxus.Text = "Noxus";
-            this.Noxus.UseVisualStyleBackColor = true;
-            this.Noxus.CheckedChanged += new System.EventHandler(this.Noxus_CheckedChanged);
-            // 
-            // Piltover
-            // 
-            this.Piltover.AutoSize = true;
-            this.Piltover.Location = new System.Drawing.Point(997, 162);
-            this.Piltover.Name = "Piltover";
-            this.Piltover.Size = new System.Drawing.Size(66, 19);
-            this.Piltover.TabIndex = 51;
-            this.Piltover.Text = "Piltover";
-            this.Piltover.UseVisualStyleBackColor = true;
-            this.Piltover.CheckedChanged += new System.EventHandler(this.Piltover_CheckedChanged);
-            // 
-            // Ixtal
-            // 
-            this.Ixtal.AutoSize = true;
-            this.Ixtal.Location = new System.Drawing.Point(997, 112);
-            this.Ixtal.Name = "Ixtal";
-            this.Ixtal.Size = new System.Drawing.Size(48, 19);
-            this.Ixtal.TabIndex = 52;
-            this.Ixtal.Text = "Ixtal";
-            this.Ixtal.UseVisualStyleBackColor = true;
-            this.Ixtal.CheckedChanged += new System.EventHandler(this.Ixtal_CheckedChanged);
-            // 
-            // Ionia
-            // 
-            this.Ionia.AutoSize = true;
-            this.Ionia.Location = new System.Drawing.Point(997, 87);
-            this.Ionia.Name = "Ionia";
-            this.Ionia.Size = new System.Drawing.Size(52, 19);
-            this.Ionia.TabIndex = 53;
-            this.Ionia.Text = "Ionia";
-            this.Ionia.UseVisualStyleBackColor = true;
-            this.Ionia.CheckedChanged += new System.EventHandler(this.Ionia_CheckedChanged);
-            // 
-            // Demacia
-            // 
-            this.Demacia.AutoSize = true;
-            this.Demacia.Location = new System.Drawing.Point(1119, 62);
-            this.Demacia.Name = "Demacia";
-            this.Demacia.Size = new System.Drawing.Size(72, 19);
-            this.Demacia.TabIndex = 54;
-            this.Demacia.Text = "Demacia";
-            this.Demacia.UseVisualStyleBackColor = true;
-            this.Demacia.CheckedChanged += new System.EventHandler(this.Demacia_CheckedChanged);
-            // 
-            // Bilgewater
-            // 
-            this.Bilgewater.AutoSize = true;
-            this.Bilgewater.Location = new System.Drawing.Point(1119, 37);
-            this.Bilgewater.Name = "Bilgewater";
-            this.Bilgewater.Size = new System.Drawing.Size(81, 19);
-            this.Bilgewater.TabIndex = 55;
-            this.Bilgewater.Text = "Bilgewater";
-            this.Bilgewater.UseVisualStyleBackColor = true;
-            this.Bilgewater.CheckedChanged += new System.EventHandler(this.Bilgewater_CheckedChanged);
-            // 
-            // BandleCity
-            // 
-            this.BandleCity.AutoSize = true;
-            this.BandleCity.Location = new System.Drawing.Point(997, 37);
-            this.BandleCity.Name = "BandleCity";
-            this.BandleCity.Size = new System.Drawing.Size(83, 19);
-            this.BandleCity.TabIndex = 56;
-            this.BandleCity.Text = "BandleCity";
-            this.BandleCity.UseVisualStyleBackColor = true;
-            this.BandleCity.CheckedChanged += new System.EventHandler(this.BandleCity_CheckedChanged);
             // 
             // QDesc
             // 
@@ -564,7 +398,6 @@
             this.label15.Size = new System.Drawing.Size(13, 15);
             this.label15.TabIndex = 70;
             this.label15.Text = "E";
-            //this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -582,11 +415,212 @@
             this.PName.Size = new System.Drawing.Size(100, 23);
             this.PName.TabIndex = 72;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Noxus);
+            this.groupBox1.Controls.Add(this.Bilgewater);
+            this.groupBox1.Controls.Add(this.Piltover);
+            this.groupBox1.Controls.Add(this.BandleCity);
+            this.groupBox1.Controls.Add(this.Zaun);
+            this.groupBox1.Controls.Add(this.Void);
+            this.groupBox1.Controls.Add(this.Freljord);
+            this.groupBox1.Controls.Add(this.ShadowIsles);
+            this.groupBox1.Controls.Add(this.Targon);
+            this.groupBox1.Controls.Add(this.Shurima);
+            this.groupBox1.Controls.Add(this.Ixtal);
+            this.groupBox1.Controls.Add(this.Ionia);
+            this.groupBox1.Controls.Add(this.Demacia);
+            this.groupBox1.Location = new System.Drawing.Point(1006, 65);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 170);
+            this.groupBox1.TabIndex = 74;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // Noxus
+            // 
+            this.Noxus.AutoSize = true;
+            this.Noxus.Location = new System.Drawing.Point(106, 117);
+            this.Noxus.Name = "Noxus";
+            this.Noxus.Size = new System.Drawing.Size(59, 19);
+            this.Noxus.TabIndex = 14;
+            this.Noxus.TabStop = true;
+            this.Noxus.Text = "Noxus";
+            this.Noxus.UseVisualStyleBackColor = true;
+            // 
+            // Bilgewater
+            // 
+            this.Bilgewater.AutoSize = true;
+            this.Bilgewater.Location = new System.Drawing.Point(106, 101);
+            this.Bilgewater.Name = "Bilgewater";
+            this.Bilgewater.Size = new System.Drawing.Size(80, 19);
+            this.Bilgewater.TabIndex = 1;
+            this.Bilgewater.TabStop = true;
+            this.Bilgewater.Text = "Bilgewater";
+            this.Bilgewater.UseVisualStyleBackColor = true;
+            // 
+            // Piltover
+            // 
+            this.Piltover.AutoSize = true;
+            this.Piltover.Location = new System.Drawing.Point(106, 22);
+            this.Piltover.Name = "Piltover";
+            this.Piltover.Size = new System.Drawing.Size(65, 19);
+            this.Piltover.TabIndex = 13;
+            this.Piltover.TabStop = true;
+            this.Piltover.Text = "Piltover";
+            this.Piltover.UseVisualStyleBackColor = true;
+            // 
+            // BandleCity
+            // 
+            this.BandleCity.AutoSize = true;
+            this.BandleCity.Location = new System.Drawing.Point(106, 63);
+            this.BandleCity.Name = "BandleCity";
+            this.BandleCity.Size = new System.Drawing.Size(85, 19);
+            this.BandleCity.TabIndex = 0;
+            this.BandleCity.TabStop = true;
+            this.BandleCity.Text = "Bandle City";
+            this.BandleCity.UseVisualStyleBackColor = true;
+            // 
+            // Zaun
+            // 
+            this.Zaun.AutoSize = true;
+            this.Zaun.Location = new System.Drawing.Point(6, 117);
+            this.Zaun.Name = "Zaun";
+            this.Zaun.Size = new System.Drawing.Size(52, 19);
+            this.Zaun.TabIndex = 11;
+            this.Zaun.TabStop = true;
+            this.Zaun.Text = "Zaun";
+            this.Zaun.UseVisualStyleBackColor = true;
+            // 
+            // Void
+            // 
+            this.Void.AutoSize = true;
+            this.Void.Location = new System.Drawing.Point(6, 101);
+            this.Void.Name = "Void";
+            this.Void.Size = new System.Drawing.Size(70, 19);
+            this.Void.TabIndex = 10;
+            this.Void.TabStop = true;
+            this.Void.Text = "The Void";
+            this.Void.UseVisualStyleBackColor = true;
+            // 
+            // Freljord
+            // 
+            this.Freljord.AutoSize = true;
+            this.Freljord.Location = new System.Drawing.Point(6, 63);
+            this.Freljord.Name = "Freljord";
+            this.Freljord.Size = new System.Drawing.Size(87, 19);
+            this.Freljord.TabIndex = 9;
+            this.Freljord.TabStop = true;
+            this.Freljord.Text = "The Freljord";
+            this.Freljord.UseVisualStyleBackColor = true;
+            // 
+            // ShadowIsles
+            // 
+            this.ShadowIsles.AutoSize = true;
+            this.ShadowIsles.Location = new System.Drawing.Point(6, 137);
+            this.ShadowIsles.Name = "ShadowIsles";
+            this.ShadowIsles.Size = new System.Drawing.Size(92, 19);
+            this.ShadowIsles.TabIndex = 6;
+            this.ShadowIsles.TabStop = true;
+            this.ShadowIsles.Text = "Shadow Isles";
+            this.ShadowIsles.UseVisualStyleBackColor = true;
+            // 
+            // Targon
+            // 
+            this.Targon.AutoSize = true;
+            this.Targon.Location = new System.Drawing.Point(6, 44);
+            this.Targon.Name = "Targon";
+            this.Targon.Size = new System.Drawing.Size(61, 19);
+            this.Targon.TabIndex = 8;
+            this.Targon.TabStop = true;
+            this.Targon.Text = "Targon";
+            this.Targon.UseVisualStyleBackColor = true;
+            // 
+            // Shurima
+            // 
+            this.Shurima.AutoSize = true;
+            this.Shurima.Location = new System.Drawing.Point(106, 44);
+            this.Shurima.Name = "Shurima";
+            this.Shurima.Size = new System.Drawing.Size(69, 19);
+            this.Shurima.TabIndex = 7;
+            this.Shurima.TabStop = true;
+            this.Shurima.Text = "Shurima";
+            this.Shurima.UseVisualStyleBackColor = true;
+            // 
+            // Ixtal
+            // 
+            this.Ixtal.AutoSize = true;
+            this.Ixtal.Location = new System.Drawing.Point(6, 83);
+            this.Ixtal.Name = "Ixtal";
+            this.Ixtal.Size = new System.Drawing.Size(47, 19);
+            this.Ixtal.TabIndex = 3;
+            this.Ixtal.TabStop = true;
+            this.Ixtal.Text = "Ixtal";
+            this.Ixtal.UseVisualStyleBackColor = true;
+            // 
+            // Ionia
+            // 
+            this.Ionia.AutoSize = true;
+            this.Ionia.Location = new System.Drawing.Point(106, 83);
+            this.Ionia.Name = "Ionia";
+            this.Ionia.Size = new System.Drawing.Size(51, 19);
+            this.Ionia.TabIndex = 2;
+            this.Ionia.TabStop = true;
+            this.Ionia.Text = "Ionia";
+            this.Ionia.UseVisualStyleBackColor = true;
+            // 
+            // Demacia
+            // 
+            this.Demacia.AutoSize = true;
+            this.Demacia.Location = new System.Drawing.Point(6, 22);
+            this.Demacia.Name = "Demacia";
+            this.Demacia.Size = new System.Drawing.Size(71, 19);
+            this.Demacia.TabIndex = 1;
+            this.Demacia.TabStop = true;
+            this.Demacia.Text = "Demacia";
+            this.Demacia.UseVisualStyleBackColor = true;
+            this.Demacia.CheckedChanged += new System.EventHandler(this.Demacia_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Female);
+            this.groupBox2.Controls.Add(this.Male);
+            this.groupBox2.Location = new System.Drawing.Point(1006, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 47);
+            this.groupBox2.TabIndex = 75;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // Female
+            // 
+            this.Female.AutoSize = true;
+            this.Female.Location = new System.Drawing.Point(106, 22);
+            this.Female.Name = "Female";
+            this.Female.Size = new System.Drawing.Size(63, 19);
+            this.Female.TabIndex = 1;
+            this.Female.TabStop = true;
+            this.Female.Text = "Female";
+            this.Female.UseVisualStyleBackColor = true;
+            // 
+            // Male
+            // 
+            this.Male.AutoSize = true;
+            this.Male.Location = new System.Drawing.Point(16, 20);
+            this.Male.Name = "Male";
+            this.Male.Size = new System.Drawing.Size(51, 19);
+            this.Male.TabIndex = 0;
+            this.Male.TabStop = true;
+            this.Male.Text = "Male";
+            this.Male.UseVisualStyleBackColor = true;
+            // 
             // Champions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 599);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PName);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -603,21 +637,6 @@
             this.Controls.Add(this.EDesc);
             this.Controls.Add(this.WDesc);
             this.Controls.Add(this.QDesc);
-            this.Controls.Add(this.BandleCity);
-            this.Controls.Add(this.Bilgewater);
-            this.Controls.Add(this.Demacia);
-            this.Controls.Add(this.Ionia);
-            this.Controls.Add(this.Ixtal);
-            this.Controls.Add(this.Piltover);
-            this.Controls.Add(this.Noxus);
-            this.Controls.Add(this.ShadowIsles);
-            this.Controls.Add(this.Shurima);
-            this.Controls.Add(this.Targon);
-            this.Controls.Add(this.Freljord);
-            this.Controls.Add(this.Void);
-            this.Controls.Add(this.Zaun);
-            this.Controls.Add(this.Male);
-            this.Controls.Add(this.Female);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.champRelease);
@@ -645,6 +664,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.champImage)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,21 +698,6 @@
         private Label label10;
         private RichTextBox champRelease;
         private Button resetButton;
-        private CheckBox Male;
-        private CheckBox Female;
-        private CheckBox BandleCity;
-        private CheckBox Bilgewater;
-        private CheckBox Demacia;
-        private CheckBox Ionia;
-        private CheckBox Ixtal;
-        private CheckBox Piltover;
-        private CheckBox Noxus;
-        private CheckBox ShadowIsles;
-        private CheckBox Shurima;
-        private CheckBox Targon;
-        private CheckBox Freljord;
-        private CheckBox Void;
-        private CheckBox Zaun;
         private RichTextBox EDesc;
         private RichTextBox WDesc;
         private RichTextBox QDesc;
@@ -706,5 +714,22 @@
         private Label label14;
         private Label label13;
         private Label label12;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private RadioButton Bilgewater;       
+        private RadioButton Piltover;
+        private RadioButton BandleCity;
+        private RadioButton Zaun;
+        private RadioButton Void;
+        private RadioButton Freljord;
+        private RadioButton ShadowIsles;
+        private RadioButton Targon;
+        private RadioButton Shurima;
+        private RadioButton Ixtal;
+        private RadioButton Ionia;
+        private RadioButton Demacia;
+        private RadioButton Female;
+        private RadioButton Male;
+        private RadioButton Noxus;
     }
 }

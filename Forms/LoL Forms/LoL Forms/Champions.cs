@@ -11,8 +11,7 @@ namespace LoL_Forms
 
     public partial class Champions : Form
     {
-        private List<Champion> allChamps = new List<Champion>();
-        private Dictionary<CheckBox, string> filterValues = new Dictionary<CheckBox, string>();
+        private List<RadioButton> radioButtons = new List<RadioButton>();
         public Champions()
         {
             InitializeComponent();
@@ -36,28 +35,20 @@ namespace LoL_Forms
             this.BackgroundImageLayout = ImageLayout.Stretch;
             // Establish the database connection
 
-            filterValues.Add(Male, "Male");
-            filterValues.Add(Female, "Female");
-            filterValues.Add(Noxus, "Noxus");
-            filterValues.Add(Ionia, "Ionia");
-            filterValues.Add(Ixtal, "Ixtal");
-            filterValues.Add(Shurima, "Shurima");
-            filterValues.Add(Piltover, "Piltover");
-            filterValues.Add(Void, "The Void");
-            filterValues.Add(Bilgewater, "Bilgewater");
-            filterValues.Add(Demacia, "Demacia");
-            filterValues.Add(Zaun, "Zaun");
-            filterValues.Add(ShadowIsles, "Shadow Isles");
-            filterValues.Add(Targon, "Targon");
-            filterValues.Add(Freljord, "The Frejlord");
-            filterValues.Add(BandleCity, "Bandle City");
+            radioButtons.Add(Noxus);
+            radioButtons.Add(Demacia);
+            radioButtons.Add(Piltover);
+            radioButtons.Add(Targon);
+            radioButtons.Add(Shurima);
+            radioButtons.Add(Freljord);
+            radioButtons.Add(BandleCity);
+            radioButtons.Add(Ixtal);
+            radioButtons.Add(Ionia);
+            radioButtons.Add(Void);
+            radioButtons.Add(Bilgewater);
+            radioButtons.Add(Zaun);
+            radioButtons.Add(ShadowIsles);
 
-            // Attach the CheckedChanged event handler to each checkbox
-            foreach (var checkbox in filterValues)
-            {
-                checkbox.Key.Click += ExclusiveCheckbox_Click;
-                
-            }
             // Fetch data from the database and bind it to form controls
             LoadChampions();
         }
@@ -78,8 +69,8 @@ namespace LoL_Forms
             {
                 string championName = reader["Name"].ToString();
                 comboBoxChampions.Items.Add(championName);
-                Champion champ = new Champion(championName, reader["Gender"].ToString(), reader["region_name"].ToString());
-                allChamps.Add(champ);
+                //Champion champ = new Champion(championName, reader["Gender"].ToString(), reader["region_name"].ToString());
+                
             }
 
             reader.Close();
@@ -193,136 +184,65 @@ namespace LoL_Forms
 
         }
 
-        private void ApplyFilters()
+     
+        private void applyFilters()
         {
-            List<Champion> filteredChampions = allChamps;
-
-            foreach (var kvp in filterValues)
+            string genderFilter = null; // Set the gender filter value based on the selected radio button
+            string regionFilter = null; // Set the region filter value based on the selected radio button
+            
+            foreach(RadioButton r in radioButtons)
             {
-                CheckBox checkBox = kvp.Key;
-                string filterValue = kvp.Value;
-
-                if (checkBox.Checked)
+                if (r.Checked)
                 {
-                    if (filterValue == "Male" || filterValue == "Female")
+                    regionFilter = r.Text;
+                    break;
+                }
+            }
+
+            if (Male.Checked)
+            {
+                genderFilter = Male.Text;
+            }else if (Female.Checked)
+            {
+                genderFilter= Female.Text;
+            }
+
+            // Create a database connection
+            using (SqlConnection connection = DatabaseConnection.GetConnection())
+            {
+                
+
+                // Create a command for the stored procedure
+                using (SqlCommand command = new SqlCommand("FilterChampions", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@GenderFilter", genderFilter);
+                    command.Parameters.AddWithValue("@RegionFilter", regionFilter);
+
+                    // Execute the command and retrieve the filtered results
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        filteredChampions = filteredChampions.Where(c => c.gender == filterValue).ToList();
+                        // Clear the items in the comboBoxChampions
+                        comboBoxChampions.Items.Clear();
+
+                        // Iterate through the filtered results and add them to the comboBoxChampions
+                        while (reader.Read())
+                        {
+                            string championName = reader["Name"].ToString();
+                            comboBoxChampions.Items.Add(championName);
+                        }
                     }
-                    else
-                    {
-                        filteredChampions = filteredChampions.Where(c => c.region == filterValue).ToList();
-                    }
                 }
             }
-            comboBoxChampions.Items.Clear();
-            foreach (Champion c in filteredChampions)
-            {
-                comboBoxChampions.Items.Add(c.name);
-            }
 
-           
-        }
-        private void ExclusiveCheckbox_Click(object sender, EventArgs e)
-        {
-            // Get the checkbox that triggered the event
-            CheckBox clickedCheckbox = (CheckBox)sender;
-
-            // Uncheck all other exclusive checkboxes except the clicked one
-            foreach (var checkbox in filterValues)
-            {
-                if (checkbox.Key == clickedCheckbox)
-                {
-                    checkbox.Key.Checked = true;
-                }
-                else if(((checkbox.Key == Male || checkbox.Key == Female) && (clickedCheckbox == Male|| clickedCheckbox == Female ) ) || ((checkbox.Key != Male && checkbox.Key != Female) && (clickedCheckbox != Male && clickedCheckbox != Female)))
-                {
-                    checkbox.Key.Checked = false;
-                }
-            }
-        }
-
-
-        private void Female_CheckedChanged(object sender, EventArgs e)
-        {
-           // filterComboBox();
-           ApplyFilters();
-           
-        }
-
-        private void Male_CheckedChanged(object sender, EventArgs e)
-        {
-            //filterComboBox();
-            ApplyFilters();
-        }
-
-        private void Bilgewater_CheckedChanged(object sender, EventArgs e)
-        {
-            //filterComboBox();
-            ApplyFilters();
-        }
-
-        private void Noxus_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
         }
 
         private void Demacia_CheckedChanged(object sender, EventArgs e)
         {
-            ApplyFilters();
+            applyFilters();
         }
-
-        private void Ionia_CheckedChanged(object sender, EventArgs e)
-        {
-            //filterComboBox();
-            ApplyFilters();
-        }
-
-        private void Zaun_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Ixtal_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void ShadowIsles_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Shurima_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Targon_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Piltover_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Freljord_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void Void_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-        private void BandleCity_CheckedChanged(object sender, EventArgs e)
-        {
-            ApplyFilters();
-        }
-
-     
     }
 
 
