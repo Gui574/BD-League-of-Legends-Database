@@ -93,10 +93,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(464, -1);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(460, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 32);
+            this.label1.Size = new System.Drawing.Size(161, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Champion Info";
             // 
@@ -150,9 +150,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(180, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
+            this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 8;
             this.label3.Text = "Name:";
             // 
@@ -514,10 +515,10 @@
             this.Freljord.AutoSize = true;
             this.Freljord.Location = new System.Drawing.Point(6, 63);
             this.Freljord.Name = "Freljord";
-            this.Freljord.Size = new System.Drawing.Size(87, 19);
+            this.Freljord.Size = new System.Drawing.Size(65, 19);
             this.Freljord.TabIndex = 9;
             this.Freljord.TabStop = true;
-            this.Freljord.Text = "The Freljord";
+            this.Freljord.Text = "Freljord";
             this.Freljord.UseVisualStyleBackColor = true;
             this.Freljord.CheckedChanged += new System.EventHandler(this.Freljord_CheckedChanged);
             // 

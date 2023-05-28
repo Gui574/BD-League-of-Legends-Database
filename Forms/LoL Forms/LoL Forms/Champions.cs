@@ -181,7 +181,12 @@ namespace LoL_Forms
             RDesc.Text = string.Empty;
             PName.Text = string.Empty;
             PDesc.Text = string.Empty;
-
+            foreach(RadioButton r in radioButtons)
+            {
+                r.Checked = false;
+            }
+            Male.Checked= false;
+            Female.Checked= false;
         }
 
      
@@ -242,6 +247,7 @@ namespace LoL_Forms
         private void Demacia_CheckedChanged(object sender, EventArgs e)
         {
             applyFilters();
+           
         }
 
         private void Male_CheckedChanged(object sender, EventArgs e)
