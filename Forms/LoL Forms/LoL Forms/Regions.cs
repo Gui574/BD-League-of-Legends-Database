@@ -207,5 +207,12 @@ namespace LoL_Forms
             region.Show();
             this.Hide();
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            HomePage home_page = new HomePage();
+            home_page.Show();
+            this.Hide();
+        }
     }
 }

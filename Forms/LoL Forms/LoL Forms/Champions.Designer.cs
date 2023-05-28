@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.comboBoxChampions = new System.Windows.Forms.ComboBox();
             this.searchChampName = new System.Windows.Forms.TextBox();
             this.runButton = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.champImage = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.champDescription = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -84,26 +82,20 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Female = new System.Windows.Forms.RadioButton();
             this.Male = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.champImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(460, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Champion Info";
-            // 
             // comboBoxChampions
             // 
             this.comboBoxChampions.FormattingEnabled = true;
-            this.comboBoxChampions.Location = new System.Drawing.Point(527, 52);
+            this.comboBoxChampions.Location = new System.Drawing.Point(528, 54);
             this.comboBoxChampions.Name = "comboBoxChampions";
             this.comboBoxChampions.Size = new System.Drawing.Size(121, 23);
             this.comboBoxChampions.TabIndex = 1;
@@ -132,30 +124,21 @@
             // 
             // champImage
             // 
-            this.champImage.Location = new System.Drawing.Point(702, 253);
+            this.champImage.Location = new System.Drawing.Point(702, 282);
             this.champImage.Name = "champImage";
             this.champImage.Size = new System.Drawing.Size(513, 305);
             this.champImage.TabIndex = 6;
             this.champImage.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(439, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Or";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(180, 56);
+            this.label3.Location = new System.Drawing.Point(144, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 21);
+            this.label3.Size = new System.Drawing.Size(126, 21);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Name:";
+            this.label3.Text = "Type the name:";
             // 
             // champDescription
             // 
@@ -431,12 +414,12 @@
             this.groupBox1.Controls.Add(this.Ixtal);
             this.groupBox1.Controls.Add(this.Ionia);
             this.groupBox1.Controls.Add(this.Demacia);
-            this.groupBox1.Location = new System.Drawing.Point(1006, 65);
+            this.groupBox1.Location = new System.Drawing.Point(1006, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 170);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Region";
             // 
             // Noxus
             // 
@@ -598,12 +581,12 @@
             // 
             this.groupBox2.Controls.Add(this.Female);
             this.groupBox2.Controls.Add(this.Male);
-            this.groupBox2.Location = new System.Drawing.Point(1006, 12);
+            this.groupBox2.Location = new System.Drawing.Point(1006, 42);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 47);
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Gender";
             // 
             // Female
             // 
@@ -629,11 +612,55 @@
             this.Male.UseVisualStyleBackColor = true;
             this.Male.CheckedChanged += new System.EventHandler(this.Male_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(432, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Champion Info";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(1074, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 21);
+            this.label17.TabIndex = 77;
+            this.label17.Text = "Filters";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(412, 52);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(95, 21);
+            this.label18.TabIndex = 78;
+            this.label18.Text = "Or select it:";
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(18, 15);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 79;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Champions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 599);
+            this.Controls.Add(this.Back);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.PName);
@@ -668,12 +695,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.champDescription);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.champImage);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.searchChampName);
             this.Controls.Add(this.comboBoxChampions);
-            this.Controls.Add(this.label1);
             this.Name = "Champions";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -689,14 +714,11 @@
         }
 
         #endregion
-
-        private Label label1;
         private ComboBox comboBoxChampions;
         private TextBox searchChampName;
         private Button runButton;
         private FileSystemWatcher fileSystemWatcher1;
         private PictureBox champImage;
-        private Label label2;
         private Label label3;
         private RichTextBox champDescription;
         private Label label4;
@@ -746,5 +768,9 @@
         private RadioButton Female;
         private RadioButton Male;
         private RadioButton Noxus;
+        private Label label1;
+        private Label label17;
+        private Label label18;
+        private Button Back;
     }
 }

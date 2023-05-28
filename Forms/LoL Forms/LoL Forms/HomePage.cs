@@ -37,5 +37,19 @@ namespace LoL_Forms
             stories_page.Show();
             this.Hide();
         }
+
+        private void AdminLogin_Click(object sender, EventArgs e)
+        {
+            Login login_page = new Login();
+            login_page.Show();
+            this.Hide();
+        }
+
+        private void Universes_Click(object sender, EventArgs e)
+        {
+            Universes universes_page = new Universes();
+            universes_page.Show();
+            this.Hide();
+        }
     }
 }
