@@ -30,5 +30,12 @@ namespace LoL_Forms
             region_page.Show();
             this.Hide();
         }
+
+        private void Stories_Click(object sender, EventArgs e)
+        {
+            Stories stories_page = new Stories();
+            stories_page.Show();
+            this.Hide();
+        }
     }
 }

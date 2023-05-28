@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace LoL_Forms
     public partial class Champions : Form
     {
         private List<Champion> allChamps = new List<Champion>();
-
+        private Dictionary<CheckBox, string> filterValues = new Dictionary<CheckBox, string>();
         public Champions()
         {
             InitializeComponent();
@@ -35,7 +36,27 @@ namespace LoL_Forms
             this.BackgroundImageLayout = ImageLayout.Stretch;
             // Establish the database connection
 
+            filterValues.Add(Male, "Male");
+            filterValues.Add(Female, "Female");
+            filterValues.Add(Noxus, "Noxus");
+            filterValues.Add(Ionia, "Ionia");
+            filterValues.Add(Ixtal, "Ixtal");
+            filterValues.Add(Shurima, "Shurima");
+            filterValues.Add(Piltover, "Piltover");
+            filterValues.Add(Void, "The Void");
+            filterValues.Add(Bilgewater, "Bilgewater");
+            filterValues.Add(Demacia, "Demacia");
+            filterValues.Add(Zaun, "Zaun");
+            filterValues.Add(ShadowIsles, "Shadow Isles");
+            filterValues.Add(Targon, "Targon");
+            filterValues.Add(Freljord, "The Frejlord");
 
+            // Attach the CheckedChanged event handler to each checkbox
+            foreach (var checkbox in filterValues)
+            {
+                checkbox.Key.Click += ExclusiveCheckbox_Click;
+                
+            }
             // Fetch data from the database and bind it to form controls
             LoadChampions();
         }
@@ -144,30 +165,7 @@ namespace LoL_Forms
             reader.Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void champName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void resetButton_Click(object sender, EventArgs e)
         {
@@ -179,161 +177,151 @@ namespace LoL_Forms
             champRegion.Text = string.Empty;
             champRelease.Text = string.Empty;
             champSpecies.Text = string.Empty;
+            comboBoxChampions.SelectedItem = null;
+            QDesc.Text = string.Empty; 
+            QName.Text = string.Empty;
+            WDesc.Text = string.Empty;
+            WName.Text = string.Empty;
+            WDesc.Text = string.Empty;
+            EDesc.Text = string.Empty;
+            EName.Text = string.Empty;
+            RName.Text = string.Empty;
+            RDesc.Text = string.Empty;
+            PName.Text = string.Empty;
+            PDesc.Text = string.Empty;
 
         }
 
-        private void filterComboBox()
+        private void ApplyFilters()
         {
-            List<Champion> filtered = allChamps;
-            if (Male.Checked)
-            {
-                filtered = filtered.Where(c => c.gender == "Male").ToList();
-            }
-            if (Female.Checked)
-            {
-                filtered = filtered.Where(c => c.gender == "Female").ToList();
-            }
-            if(BandleCity.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Bandle City").ToList();
-            }
-            if (Noxus.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Noxus").ToList();
-            }
-            if (Ionia.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Ionia").ToList();
-            }
-            if (Ixtal.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Ixtal").ToList();
-            }
-            if (Shurima.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Shurima").ToList();
-            }
-            if (Piltover.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Piltover").ToList();
-            }
-            if (Void.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "The Void").ToList();
-            }
-            if (Bilgewater.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Bilgewater").ToList();
-            }
-            if (Demacia.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Demacia").ToList();
-            }
-            if (Zaun.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Zaun").ToList();
-            }
-            if (ShadowIsles.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Shadow Isles").ToList();
-            }
-            if (Targon.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "Targon").ToList();
-            }
-            if (Freljord.Checked)
-            {
-                filtered = filtered.Where(c => c.region == "The Frejlord").ToList();
-            }
+            List<Champion> filteredChampions = allChamps;
 
+            foreach (var kvp in filterValues)
+            {
+                CheckBox checkBox = kvp.Key;
+                string filterValue = kvp.Value;
+
+                if (checkBox.Checked)
+                {
+                    if (filterValue == "Male" || filterValue == "Female")
+                    {
+                        filteredChampions = filteredChampions.Where(c => c.gender == filterValue).ToList();
+                    }
+                    else
+                    {
+                        filteredChampions = filteredChampions.Where(c => c.region == filterValue).ToList();
+                    }
+                }
+            }
             comboBoxChampions.Items.Clear();
-            foreach(Champion c in filtered)
+            foreach (Champion c in filteredChampions)
             {
                 comboBoxChampions.Items.Add(c.name);
             }
+
+           
+        }
+        private void ExclusiveCheckbox_Click(object sender, EventArgs e)
+        {
+            // Get the checkbox that triggered the event
+            CheckBox clickedCheckbox = (CheckBox)sender;
+
+            // Uncheck all other exclusive checkboxes except the clicked one
+            foreach (var checkbox in filterValues)
+            {
+                if (checkbox.Key == clickedCheckbox)
+                {
+                    checkbox.Key.Checked = true;
+                }
+                else if(((checkbox.Key == Male || checkbox.Key == Female) && (clickedCheckbox == Male|| clickedCheckbox == Female ) ) || ((checkbox.Key != Male && checkbox.Key != Female) && (clickedCheckbox != Male && clickedCheckbox != Female)))
+                {
+                    checkbox.Key.Checked = false;
+                }
+            }
         }
 
-        
 
         private void Female_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+           // filterComboBox();
+           ApplyFilters();
+           
         }
 
         private void Male_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            //filterComboBox();
+            ApplyFilters();
         }
 
         private void Bilgewater_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            //filterComboBox();
+            ApplyFilters();
         }
 
         private void Noxus_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Demacia_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Ionia_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            //filterComboBox();
+            ApplyFilters();
         }
 
         private void Zaun_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Ixtal_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void ShadowIsles_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Shurima_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Targon_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Piltover_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Freljord_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void Void_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
         private void BandleCity_CheckedChanged(object sender, EventArgs e)
         {
-            filterComboBox();
+            ApplyFilters();
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 
 

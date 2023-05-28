@@ -58,7 +58,7 @@ namespace LoL_Forms
                             Ixtal.SizeMode = PictureBoxSizeMode.StretchImage;
                         }
 
-                        else if (name == "Plitover")
+                        else if (name == "Piltover")
                         {
                             Piltover.ImageLocation = reader["emblem"].ToString();
                             Piltover.SizeMode = PictureBoxSizeMode.StretchImage;
