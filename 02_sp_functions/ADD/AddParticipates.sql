@@ -6,14 +6,15 @@ CREATE PROCEDURE [dbo].[ChampParticipesStory]
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     INSERT INTO Participates VALUES (@champion_name, @stories_title)
+    COMMIT TRANSACTION
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION    
     END CATCH
 
 END

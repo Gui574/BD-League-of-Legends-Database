@@ -9,31 +9,35 @@ CREATE PROCEDURE [dbo].[AddChampion]
 @quote VARCHAR(200),	
 @releaseDate DATE,
 
-@P_name				VARCHAR(50),
-@P_description		VARCHAR(MAX),
+@P_name				VARCHAR(50) = NULL,
+@P_description		VARCHAR(MAX) = NULL,
 
-@Q_name				VARCHAR(50),
-@Q_description		VARCHAR(MAX),
+@Q_name				VARCHAR(50) = NULL,
+@Q_description		VARCHAR(MAX) = NULL,
 
-@W_name				VARCHAR(50),
-@W_description		VARCHAR(MAX),
+@W_name				VARCHAR(50) = NULL,
+@W_description		VARCHAR(MAX) = NULL,
 
-@E_name				VARCHAR(50),
-@E_description		VARCHAR(MAX),
+@E_name				VARCHAR(50) = NULL,
+@E_description		VARCHAR(MAX) = NULL,
 
-@R_name				VARCHAR(50),
-@R_description		VARCHAR(MAX),
+@R_name				VARCHAR(50) = NULL,
+@R_description		VARCHAR(MAX) = NULL,
 
-@stories_title      VARCHAR(70),
+@stories_title      VARCHAR(70) = NULL,
 
-@universe_name      VARCHAR(25)
+@universe_name      VARCHAR(25) = NULL
 
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     INSERT INTO Champion VALUES (@name, @gender, @description, @species,@region_name,@splashArt,@quote,@releaseDate)
-    INSERT INTO Abilities VALUES (@name, @P_name, @P_description, @Q_name, @Q_description, @W_name, @W_description, @E_name, @E_description, @R_name, @R_description)
+
+    IF @P_name IS NOT NULL AND @Q_name IS NOT NULL AND @W_name IS NOT NULL AND @E_name IS NOT NULL AND @R_name IS NOT NULL
+        BEGIN
+            INSERT INTO Abilities VALUES (@name, @P_name, @P_description, @Q_name, @Q_description, @W_name, @W_description, @E_name, @E_description, @R_name, @R_description)
+        END
 
     IF @stories_title IS NOT NULL
         BEGIN
@@ -44,12 +48,14 @@ BEGIN TRANSACTION;
         BEGIN
             INSERT INTO Exists_On VALUES (@name, @universe_name)
         END
+        
+    COMMIT TRANSACTION
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION   
     END CATCH
 
 END

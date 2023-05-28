@@ -8,7 +8,7 @@ CREATE PROCEDURE [dbo].[AlterUniverse]
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     
     --Check if the Universe exists
     IF EXISTS (SELECT * FROM Alternate_Universe WHERE name = @name)
@@ -22,13 +22,13 @@ BEGIN TRANSACTION;
             WHERE name = @name;
         END
 
-    COMMIT TRANSACTION;
+    COMMIT TRANSACTION
 END TRY
 
 BEGIN CATCH
     --If there's a problem with the transaction, rollback the transaction
     SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-    ROLLBACK TRANSACTION;
+    ROLLBACK TRANSACTION
 END CATCH
 
 END

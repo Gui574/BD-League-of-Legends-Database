@@ -8,7 +8,7 @@ BEGIN
 SET NOCOUNT ON;
 
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
 
 --Check if the champion exists
 IF EXISTS (SELECT * FROM Champion WHERE name = @ChampName)
@@ -23,21 +23,21 @@ IF EXISTS (SELECT * FROM Champion WHERE name = @ChampName)
         DELETE FROM Champion WHERE name = @ChampName;
 
         --Commit the transaction
-        COMMIT TRANSACTION;
+        COMMIT TRANSACTION
     END
 ELSE
 
     BEGIN
     --If the champion doesn't exist, rollback the transaction
     SELECT 'Champion not found, rollbacking transaction.' AS Result
-    ROLLBACK TRANSACTION;
+    ROLLBACK TRANSACTION
 END
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION;    
     END CATCH
     
 END

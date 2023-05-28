@@ -4,6 +4,7 @@ CREATE PROCEDURE [dbo].[Admin_Login]
 AS
 BEGIN
 BEGIN TRY
+BEGIN TRANSACTION
     SET NOCOUNT ON
 
     DECLARE @HashPassword varbinary(64)
@@ -23,12 +24,13 @@ BEGIN TRY
     END
 
     SELECT 'Success' AS Result
+    COMMIT TRANSACTION
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION
     END CATCH
 
 

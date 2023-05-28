@@ -8,7 +8,7 @@ BEGIN
 SET NOCOUNT ON;
 
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
 
 --Check if the story exists
 IF EXISTS (SELECT * FROM Stories WHERE title = @StoryName)
@@ -21,21 +21,21 @@ IF EXISTS (SELECT * FROM Stories WHERE title = @StoryName)
         DELETE FROM Stories WHERE title = @StoryName;
 
         --Commit the transaction
-        COMMIT TRANSACTION;
+        COMMIT TRANSACTION
     END
 ELSE
 
  BEGIN
     --If the region doesn't exist, rollback the transaction
     SELECT 'Story not found, rollbacking transaction.' AS Result
-    ROLLBACK TRANSACTION;
+    ROLLBACK TRANSACTION
 END
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;       
+        ROLLBACK TRANSACTION      
     END CATCH
     
 END

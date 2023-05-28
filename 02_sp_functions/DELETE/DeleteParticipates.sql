@@ -9,7 +9,7 @@ BEGIN
 SET NOCOUNT ON;
 
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
 
 --Check if the Story and champion exist
 IF EXISTS (SELECT * FROM Stories WHERE title = @stories_title)
@@ -21,13 +21,13 @@ IF EXISTS (SELECT * FROM Stories WHERE title = @stories_title)
             DELETE FROM Participates WHERE champion_name = @champion_name AND stories_title = @stories_title ;
 
             --Commit the transaction
-            COMMIT TRANSACTION;
+            COMMIT TRANSACTION
         END
         ELSE
             BEGIN
             --If the champion doesn't exist, rollback the transaction
             Select 'Champion not found, rollbacking transaction.' As Result
-            ROLLBACK TRANSACTION;
+            ROLLBACK TRANSACTION
         END
     END
     ELSE
@@ -35,14 +35,14 @@ IF EXISTS (SELECT * FROM Stories WHERE title = @stories_title)
         BEGIN
         --If the Story doesn't exist, rollback the transaction
         Select 'Story not found, rollbacking transaction.' As Result
-        ROLLBACK TRANSACTION;
+        ROLLBACK TRANSACTION
         END
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;      
+        ROLLBACK TRANSACTION     
     END CATCH
     
 END

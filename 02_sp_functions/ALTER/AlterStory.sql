@@ -9,7 +9,7 @@ CREATE PROCEDURE [dbo].[AlterStory]
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     
     --Check if the Story exists
     IF EXISTS (SELECT * FROM Stories WHERE title = @title)
@@ -24,13 +24,13 @@ BEGIN TRANSACTION;
             WHERE title = @title;
         END
 
-    COMMIT TRANSACTION;
+    COMMIT TRANSACTION
 END TRY
 
 BEGIN CATCH
     --If there's a problem with the transaction, rollback the transaction
     SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-    ROLLBACK TRANSACTION;
+    ROLLBACK TRANSACTION
 END CATCH
 
 END
