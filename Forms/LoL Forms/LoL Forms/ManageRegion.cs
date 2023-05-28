@@ -70,7 +70,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                 if (result == "Region altered")
+                                 if (result == "Success")
                                 {
                                     MessageBox.Show("Region altered Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManageRegion manageChampios_page = new ManageRegion();

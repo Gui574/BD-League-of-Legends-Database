@@ -126,7 +126,7 @@ namespace LoL_Forms
                                     MessageBox.Show("Champion name already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                                 }
-                                else if (result == "Champion Added Successfully")
+                                else if (result == "Success")
                                 {
                                     MessageBox.Show("Champion Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     AddChampion manageChampios_page = new AddChampion();
@@ -143,6 +143,10 @@ namespace LoL_Forms
 
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

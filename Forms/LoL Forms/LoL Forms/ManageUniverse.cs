@@ -106,7 +106,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result == "Universe altered successfully")
+                                if (result == "Success")
                                 {
                                     MessageBox.Show("Universe altered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManageUniverse manageChampios_page = new ManageUniverse();
@@ -150,12 +150,12 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result != "Universe deleted successfully")
+                                if (result != "Success")
                                 {
                                     MessageBox.Show(result, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                                 }
-                                else if (result == "Universe deleted successfully")
+                                else if (result == "Success")
                                 {
                                     MessageBox.Show("Universe deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManageUniverse manageChampios_page = new ManageUniverse();

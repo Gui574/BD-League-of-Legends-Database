@@ -96,7 +96,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result == "Story altered successfully")
+                                if (result == "Success")
                                 {
                                     MessageBox.Show("Story altered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManageStories manageChampios_page = new ManageStories();
@@ -141,7 +141,7 @@ namespace LoL_Forms
                                     MessageBox.Show("Story not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                                 }
-                                else if (result == "Story deleted successfully")
+                                else if (result == "Success")
                                 {
                                     MessageBox.Show("Story deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     ManageStories manageChampios_page = new ManageStories();

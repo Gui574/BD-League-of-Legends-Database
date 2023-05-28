@@ -47,7 +47,7 @@ namespace LoL_Forms
                 string result = null;
                 using (SqlConnection connection = DatabaseConnection.GetConnection())
                 {
-                    using (SqlCommand command = new SqlCommand("dbo.AddStoty", connection))
+                    using (SqlCommand command = new SqlCommand("dbo.AddStory", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -65,7 +65,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                 if (result == "Story added successfully")
+                                 if (result == "Success")
                                 {
                                     MessageBox.Show("Story added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     AddStory manageChampios_page = new AddStory();

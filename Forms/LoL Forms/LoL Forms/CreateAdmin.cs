@@ -42,7 +42,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result == "New Admin created.")
+                                if (result == "Success")
                                 {
                                     MessageBox.Show("Admin created successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     Admin admin_page = new Admin();

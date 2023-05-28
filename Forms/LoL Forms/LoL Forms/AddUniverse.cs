@@ -45,7 +45,7 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result == "Universe added successfully")
+                                if (result == "Success")
                                 {
                                     MessageBox.Show("Universe added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     AddUniverse manageChampios_page = new AddUniverse();

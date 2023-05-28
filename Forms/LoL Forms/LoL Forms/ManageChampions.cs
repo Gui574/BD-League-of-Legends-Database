@@ -69,7 +69,7 @@ namespace LoL_Forms
                                 MessageBox.Show("Champion not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                             }
-                            else if (result == "Champion deleted.")
+                            else if (result == "Success")
                             {
                                 MessageBox.Show("Champion deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ManageChampions manageChampios_page = new ManageChampions();
@@ -229,12 +229,12 @@ namespace LoL_Forms
                         if (reader.Read())
                         {
                             result = reader.GetString(0); // Retrieve the result from the first column
-                            if (result != "Champion Altered Successfully ")
+                            if (result != "Success")
                             {
                                 MessageBox.Show(result, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                             }
-                            else if (result == "Champion Altered Successfully ")
+                            else if (result == "Success")
                             {
                                 MessageBox.Show("Champion Altered Successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 ManageChampions manageChampios_page = new ManageChampions();
