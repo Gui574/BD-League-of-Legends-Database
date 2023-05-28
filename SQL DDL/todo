@@ -1,6 +1,0 @@
-Add New Champion: Create a stored procedure that adds a new champion to the database. The procedure should take inputs like the champion name, abilities, and stats and add them to the appropriate tables.
-visited pages
-region with most champs
-champs that appear in most stories?
-- A trigger that updates a table with the total number of champions whenever a new champion is added to the champions table.
-cursors are like filter search

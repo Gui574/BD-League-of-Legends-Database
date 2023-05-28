@@ -1,4 +1,4 @@
-CREATE PROCEDURE CreateAdmin
+CREATE PROCEDURE [dbo].[CreateAdmin]
 @Username varchar(50),
 @Password varchar(50)
 AS
