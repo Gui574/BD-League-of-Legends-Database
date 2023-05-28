@@ -50,6 +50,7 @@ namespace LoL_Forms
             filterValues.Add(ShadowIsles, "Shadow Isles");
             filterValues.Add(Targon, "Targon");
             filterValues.Add(Freljord, "The Frejlord");
+            filterValues.Add(BandleCity, "Bandle City");
 
             // Attach the CheckedChanged event handler to each checkbox
             foreach (var checkbox in filterValues)
