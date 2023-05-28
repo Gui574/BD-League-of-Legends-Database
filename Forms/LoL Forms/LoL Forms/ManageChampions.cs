@@ -249,5 +249,12 @@ namespace LoL_Forms
                 }
             }
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Admin admin_page= new Admin();
+            admin_page.Show();
+            this.Hide();
+        }
     }
 }

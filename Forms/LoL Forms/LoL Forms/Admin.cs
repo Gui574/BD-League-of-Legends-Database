@@ -52,8 +52,36 @@ namespace LoL_Forms
 
         private void DeleteRegion_Click(object sender, EventArgs e)
         {
-            DeleteRegion deleteregion_page = new DeleteRegion();
+            ManageRegion deleteregion_page = new ManageRegion();
             deleteregion_page.Show();
+            this.Hide();
+        }
+
+        private void ManageStories_Click(object sender, EventArgs e)
+        {
+            ManageStories managestories_page = new ManageStories();
+            managestories_page.Show();
+            this.Hide();
+        }
+
+        private void ManageUniverses_Click(object sender, EventArgs e)
+        {
+            ManageUniverse manageUniverse_page = new ManageUniverse();
+            manageUniverse_page.Show();
+            this.Hide();
+        }
+
+        private void AddStory_Click(object sender, EventArgs e)
+        {
+            AddStory addStory_page = new AddStory();
+            addStory_page.Show();
+            this.Hide();
+        }
+
+        private void AddUniverse_Click(object sender, EventArgs e)
+        {
+            AddUniverse addUniverse_page = new AddUniverse();
+            addUniverse_page.Show();
             this.Hide();
         }
     }

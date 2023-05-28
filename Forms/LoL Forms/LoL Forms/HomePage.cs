@@ -51,5 +51,13 @@ namespace LoL_Forms
             universes_page.Show();
             this.Hide();
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            string imagePath = Path.Combine(Application.StartupPath, "Resources", "ua.png");
+            pictureBox1.Image = Properties.Resources.ua;
+            pictureBox1.SizeMode=PictureBoxSizeMode.StretchImage;
+            ;
+        }
     }
 }

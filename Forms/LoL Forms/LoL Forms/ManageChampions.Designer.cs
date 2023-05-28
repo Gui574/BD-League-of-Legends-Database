@@ -68,6 +68,7 @@
             this.QDesc = new System.Windows.Forms.RichTextBox();
             this.Save = new System.Windows.Forms.Button();
             this.Gender = new System.Windows.Forms.ComboBox();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -409,11 +410,22 @@
             this.Gender.Size = new System.Drawing.Size(121, 23);
             this.Gender.TabIndex = 90;
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(12, 9);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 91;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // ManageChampions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 601);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.Gender);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.PName);
@@ -504,5 +516,6 @@
         private RichTextBox QDesc;
         private Button Save;
         private ComboBox Gender;
+        private Button Back;
     }
 }

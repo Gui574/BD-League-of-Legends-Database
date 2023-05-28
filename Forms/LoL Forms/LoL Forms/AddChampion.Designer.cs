@@ -66,6 +66,7 @@
             this.Universe = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -386,11 +387,22 @@
             this.label13.TabIndex = 108;
             this.label13.Text = "Alternate Universe where it exists on";
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(12, 12);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 109;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // AddChampion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 619);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Universe);
@@ -477,5 +489,6 @@
         private ComboBox Universe;
         private Label label11;
         private Label label13;
+        private Button Back;
     }
 }

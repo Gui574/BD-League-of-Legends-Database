@@ -32,10 +32,12 @@
             this.NewAdmin = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.AddChamp = new System.Windows.Forms.Button();
-            this.DeleteChamp = new System.Windows.Forms.Button();
-            this.DeleteRegion = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ManageChamps = new System.Windows.Forms.Button();
+            this.ManageRegions = new System.Windows.Forms.Button();
+            this.ManageStories = new System.Windows.Forms.Button();
+            this.ManageUniverses = new System.Windows.Forms.Button();
+            this.AddStory = new System.Windows.Forms.Button();
+            this.AddUniverse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,53 +80,77 @@
             this.AddChamp.UseVisualStyleBackColor = true;
             this.AddChamp.Click += new System.EventHandler(this.AddChamp_Click);
             // 
-            // DeleteChamp
+            // ManageChamps
             // 
-            this.DeleteChamp.Location = new System.Drawing.Point(136, 251);
-            this.DeleteChamp.Name = "DeleteChamp";
-            this.DeleteChamp.Size = new System.Drawing.Size(153, 35);
-            this.DeleteChamp.TabIndex = 4;
-            this.DeleteChamp.Text = "Manage Champions";
-            this.DeleteChamp.UseVisualStyleBackColor = true;
-            this.DeleteChamp.Click += new System.EventHandler(this.DeleteChamp_Click);
+            this.ManageChamps.Location = new System.Drawing.Point(136, 251);
+            this.ManageChamps.Name = "ManageChamps";
+            this.ManageChamps.Size = new System.Drawing.Size(153, 35);
+            this.ManageChamps.TabIndex = 4;
+            this.ManageChamps.Text = "Manage Champions";
+            this.ManageChamps.UseVisualStyleBackColor = true;
+            this.ManageChamps.Click += new System.EventHandler(this.DeleteChamp_Click);
             // 
-            // DeleteRegion
+            // ManageRegions
             // 
-            this.DeleteRegion.Location = new System.Drawing.Point(466, 96);
-            this.DeleteRegion.Name = "DeleteRegion";
-            this.DeleteRegion.Size = new System.Drawing.Size(153, 35);
-            this.DeleteRegion.TabIndex = 5;
-            this.DeleteRegion.Text = "Manage Region";
-            this.DeleteRegion.UseVisualStyleBackColor = true;
-            this.DeleteRegion.Click += new System.EventHandler(this.DeleteRegion_Click);
+            this.ManageRegions.Location = new System.Drawing.Point(136, 318);
+            this.ManageRegions.Name = "ManageRegions";
+            this.ManageRegions.Size = new System.Drawing.Size(153, 35);
+            this.ManageRegions.TabIndex = 5;
+            this.ManageRegions.Text = "Manage Regions";
+            this.ManageRegions.UseVisualStyleBackColor = true;
+            this.ManageRegions.Click += new System.EventHandler(this.DeleteRegion_Click);
             // 
-            // button1
+            // ManageStories
             // 
-            this.button1.Location = new System.Drawing.Point(466, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Manage Story";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ManageStories.Location = new System.Drawing.Point(466, 96);
+            this.ManageStories.Name = "ManageStories";
+            this.ManageStories.Size = new System.Drawing.Size(153, 35);
+            this.ManageStories.TabIndex = 6;
+            this.ManageStories.Text = "Manage Stories";
+            this.ManageStories.UseVisualStyleBackColor = true;
+            this.ManageStories.Click += new System.EventHandler(this.ManageStories_Click);
             // 
-            // button2
+            // ManageUniverses
             // 
-            this.button2.Location = new System.Drawing.Point(466, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 35);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Delete Universes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ManageUniverses.Location = new System.Drawing.Point(466, 318);
+            this.ManageUniverses.Name = "ManageUniverses";
+            this.ManageUniverses.Size = new System.Drawing.Size(153, 35);
+            this.ManageUniverses.TabIndex = 7;
+            this.ManageUniverses.Text = "Manage Universes";
+            this.ManageUniverses.UseVisualStyleBackColor = true;
+            this.ManageUniverses.Click += new System.EventHandler(this.ManageUniverses_Click);
+            // 
+            // AddStory
+            // 
+            this.AddStory.Location = new System.Drawing.Point(466, 173);
+            this.AddStory.Name = "AddStory";
+            this.AddStory.Size = new System.Drawing.Size(153, 35);
+            this.AddStory.TabIndex = 8;
+            this.AddStory.Text = "Add new Story";
+            this.AddStory.UseVisualStyleBackColor = true;
+            this.AddStory.Click += new System.EventHandler(this.AddStory_Click);
+            // 
+            // AddUniverse
+            // 
+            this.AddUniverse.Location = new System.Drawing.Point(466, 251);
+            this.AddUniverse.Name = "AddUniverse";
+            this.AddUniverse.Size = new System.Drawing.Size(153, 35);
+            this.AddUniverse.TabIndex = 9;
+            this.AddUniverse.Text = "Add Universe";
+            this.AddUniverse.UseVisualStyleBackColor = true;
+            this.AddUniverse.Click += new System.EventHandler(this.AddUniverse_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.DeleteRegion);
-            this.Controls.Add(this.DeleteChamp);
+            this.Controls.Add(this.AddUniverse);
+            this.Controls.Add(this.AddStory);
+            this.Controls.Add(this.ManageUniverses);
+            this.Controls.Add(this.ManageStories);
+            this.Controls.Add(this.ManageRegions);
+            this.Controls.Add(this.ManageChamps);
             this.Controls.Add(this.AddChamp);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.NewAdmin);
@@ -143,9 +169,11 @@
         private Button NewAdmin;
         private Button Back;
         private Button AddChamp;
-        private Button DeleteChamp;
-        private Button DeleteRegion;
-        private Button button1;
-        private Button button2;
+        private Button ManageChamps;
+        private Button ManageRegions;
+        private Button ManageStories;
+        private Button ManageUniverses;
+        private Button AddStory;
+        private Button AddUniverse;
     }
 }

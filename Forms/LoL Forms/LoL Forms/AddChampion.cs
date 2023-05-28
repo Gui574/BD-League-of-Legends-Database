@@ -121,15 +121,15 @@ namespace LoL_Forms
                             if (reader.Read())
                             {
                                 result = reader.GetString(0); // Retrieve the result from the first column
-                                if (result == "Champion not found, rollbacking transaction.")
+                                if (result == "Champion name already exists")
                                 {
-                                    MessageBox.Show("Champion not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Champion name already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                                 }
-                                else if (result == "Champion deleted.")
+                                else if (result == "Champion Added Successfully")
                                 {
-                                    MessageBox.Show("Champion deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    ManageChampions manageChampios_page = new ManageChampions();
+                                    MessageBox.Show("Champion Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    AddChampion manageChampios_page = new AddChampion();
                                     manageChampios_page.Show();
                                     this.Hide();
                                 }
@@ -144,6 +144,13 @@ namespace LoL_Forms
                     }
                 }
             }
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Admin admin_page = new Admin();
+            admin_page.Show();
+            this.Hide();
         }
     }
 }

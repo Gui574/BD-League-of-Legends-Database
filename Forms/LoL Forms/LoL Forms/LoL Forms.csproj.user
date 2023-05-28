@@ -4,6 +4,12 @@
     <Compile Update="AddChampion.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AddStory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddUniverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,13 +22,19 @@
     <Compile Update="ManageChampions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DeleteRegion.cs">
+    <Compile Update="ManageRegion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageStories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManageUniverse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Regions.cs">

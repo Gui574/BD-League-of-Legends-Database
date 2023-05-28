@@ -80,6 +80,11 @@ C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\o
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Login.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.CreateAdmin.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.AddChampion.resources
-C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.DeleteRegion.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Universes.resources
 C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.ManageChampions.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.ManageRegion.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.ManageStories.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.ManageUniverse.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.AddStory.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.AddUniverse.resources
+C:\Users\guiml\Desktop\BD-League-of-Legends-Database\Forms\LoL Forms\LoL Forms\obj\Debug\net6.0-windows\LoL_Forms.Properties.Resources.resources
