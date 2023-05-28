@@ -564,7 +564,7 @@
             this.label15.Size = new System.Drawing.Size(13, 15);
             this.label15.TabIndex = 70;
             this.label15.Text = "E";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            //this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
