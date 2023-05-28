@@ -9,14 +9,15 @@ CREATE PROCEDURE [dbo].[AddStory]
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     INSERT INTO Stories VALUES (@title, @author, @link, @type, @universe_name)
+    COMMIT TRANSACTION
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION     
     END CATCH
 
 END

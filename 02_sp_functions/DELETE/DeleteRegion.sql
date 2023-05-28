@@ -8,7 +8,7 @@ BEGIN
 SET NOCOUNT ON;
 
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
 
 --Check if the region exists
 IF EXISTS (SELECT * FROM Region WHERE name = @RegionName)
@@ -18,30 +18,31 @@ IF EXISTS (SELECT * FROM Region WHERE name = @RegionName)
         DELETE FROM Tribes WHERE region_name = @RegionName;
         DELETE FROM Secrets WHERE region_name = @RegionName;
 
-        --Delete the region from the Region table
-        DELETE FROM Region WHERE name = @RegionName;
-
         --Change the region of champions to Runeterra (Unknown)
-          UPDATE Champion 
+        UPDATE Champion 
             SET region_name ='Runeterra (Unknown)'
             WHERE region_name = @RegionName
 
+        --Delete the region from the Region table
+        DELETE FROM Region WHERE name = @RegionName;
+
+       
         --Commit the transaction
-        COMMIT TRANSACTION;
+        COMMIT TRANSACTION
     END
 ELSE
 
     BEGIN
     --If the region doesn't exist, rollback the transaction
     Select 'Region not found, rollbacking transaction.' As Result
-    ROLLBACK TRANSACTION;
+    ROLLBACK TRANSACTION
 END
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;      
+        ROLLBACK TRANSACTION      
     END CATCH
     
 END

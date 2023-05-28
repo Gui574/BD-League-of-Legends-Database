@@ -8,16 +8,15 @@ CREATE PROCEDURE [dbo].[AddUniverse]
 AS
 BEGIN
 BEGIN TRY
-BEGIN TRANSACTION;
+BEGIN TRANSACTION
     INSERT INTO Alternate_Universe VALUES (@name, @skinLine, @art, @yearCreated)
+    COMMIT TRANSACTION
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
         SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
-        ROLLBACK TRANSACTION;     
+        ROLLBACK TRANSACTION    
     END CATCH
-
-
 
 END
