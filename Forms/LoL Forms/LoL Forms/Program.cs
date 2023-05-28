@@ -19,17 +19,17 @@ namespace LoL_Forms
 
     public static class DatabaseConnection
     {
-        private static SqlConnection connection;
+
 
         public static SqlConnection GetConnection()
         {
-            if (connection == null)
-            {
+            SqlConnection connection;
+            
                 // Establish the database connection
                 string connectionString = "Server=bdadmin.database.windows.net;Database=LoLDatabase;User Id=bdadmin;Password=Password2023;";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
-            }
+            
             return connection;
         }
     }
