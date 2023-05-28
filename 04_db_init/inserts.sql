@@ -239,9 +239,9 @@ INSERT INTO Tribes VALUES('The Lunari', "https://db3pap006files.storage.live.com
 INSERT INTO Tribes VALUES('The Draklorn', "https://db3pap006files.storage.live.com/y4m0f5UzK9Sx8NK26RWbANwWN8pVjrVRubCYzwdr2x1IyLXOO_8BrV5Q9VEHBBwzSXL-PEAYUc5Xp6oYCC76V_mPo8iOZklJdzdxXimf2_EewvXywFU1xK9a5MebqQ-Ds6FmjWXSWZkBFh5-AYaQPRlkeUjLro4TiCd-HESwe8rwSsnyxbxUpVnv0TNjZplPZNm?width=1900&height=1140&cropmode=none", "As the highest tier of the priesthood—answering only to the Ice Witch herself—Draklorn are among the most zealous and learned of all Frostguard. Some of them rarely set foot outside the Citadel's walls, and they are no doubt privy to secrets that would never be entrusted to the lower ranks.", 'Freljord');
 
 
-INSERT INTO Alternate_Universe VALUES ('Star Guardian','Star Guardian / Pajama Guardian / Star Nemesis', 2015);
-INSERT INTO Alternate_Universe VALUES ('Odyssey','Odyssey / Galaxy Slayer', 2018);
-INSERT INTO Alternate_Universe VALUES ('K/DA','KDA / ALL OUT', 2018);
+INSERT INTO Alternate_Universe VALUES ('Star Guardian','Star Guardian / Pajama Guardian / Star Nemesis',"https://db3pap006files.storage.live.com/y4monixx_G_QsLRUgy46i3KnpSvupak_uqbN18gjuoXFz7IMZ3Xh2xPQzmcys_lPJGrix2u2LuNfS2RvRnBi1yIPJKkErX-QV9zhWVL8CLRm6QKdBFaKcxF4V_c0PS5uVuP_WdDeH1o86eybAwGGyX2ZNn_jOyvu-VZsWiWj3oHho_-fF_027sCMNMQxIGISltl?width=205&height=119&cropmode=none", 2015);
+INSERT INTO Alternate_Universe VALUES ('Odyssey','Odyssey / Galaxy Slayer',"https://db3pap006files.storage.live.com/y4muVVxxT5KlPiBNzKOd0VEEpoTl2uql7koWjCer-3aljgtrl5CN1WLN1_8AAe0uUgZYQqWBeFPsVMYoXE1Uy2d6hFGExzjsU_JjqC7kHAP_loosxGGxzJ8i5MWzWPQZFv3KYVLHXJktcIX3TNoKbF9xzOPW5s93D6xb7hb-qkPeD9VnqxKYv8LEv_kGMZRA1ML?width=1274&height=1016&cropmode=none", 2018);
+INSERT INTO Alternate_Universe VALUES ('K/DA','KDA / ALL OUT',"https://db3pap006files.storage.live.com/y4mk6Tg8X_EHLncvO7EUyS8n8pAa4PL4k_QFOs49nQqPARO53YkbK72yU8xwCbmYWKUa78xjgEPiOVSq9LGrkADos0Z2OCuqAFVAP_bnFrJrS5OsOJ4RFyJBrwBcE0dlgThXmgxQZkV8KYYDnXUkYQ4tRpD21XSQI8HohiLM_utDOEmABfkXfbASnU5a3uKnSvb?width=480&height=210&cropmode=none", 2018);
 
 
 

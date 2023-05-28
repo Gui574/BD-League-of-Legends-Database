@@ -56,7 +56,8 @@ region_name		VARCHAR(50)			NOT NULL	FOREIGN KEY REFERENCES Region(name)
 
 CREATE TABLE Alternate_Universe (
 name			VARCHAR(25)			NOT NULL	PRIMARY KEY,
-skinLine		VARCHAR(50)			NOT NULL	UNIQUE,		
+skinLine		VARCHAR(50)			NOT NULL	UNIQUE,
+art				VARCHAR(350)		NOT NULL,	
 yearCreated		INT					NOT NULL
 );
 

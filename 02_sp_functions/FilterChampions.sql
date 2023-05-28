@@ -7,10 +7,10 @@ BEGIN
      DECLARE @sqlQuery NVARCHAR(MAX) = 'SELECT * FROM Champion WHERE 1=1';
 
     -- Add conditions based on the variables
-    IF @GenderFilter IS NOT ""
+    IF @GenderFilter IS NOT NULL
         SET @sqlQuery = @sqlQuery + ' AND gender = @GenderFilter';
 
-    IF @RegionFilter IS NOT ""
+    IF @RegionFilter IS NOT NULL
         SET @sqlQuery = @sqlQuery + ' AND region_name = @RegionFilter';
 
 

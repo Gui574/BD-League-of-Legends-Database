@@ -28,14 +28,14 @@ ELSE
 
     BEGIN
     --If the universe doesn't exist, rollback the transaction
-    PRINT 'Alternate Universe not found, rollbacking transaction.'
+    SELECT 'Alternate Universe not found, rollbacking transaction.' AS Result
     ROLLBACK TRANSACTION;
 END
 END TRY
 
     BEGIN CATCH
         --If there's a problem with the transaction, rollback the transaction
-        PRINT '[ERROR] ' + ERROR_MESSAGE();
+        SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
         ROLLBACK TRANSACTION;        
     END CATCH
     

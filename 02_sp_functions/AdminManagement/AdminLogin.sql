@@ -3,6 +3,7 @@ CREATE PROCEDURE [dbo].[Admin_Login]
     @Password varchar(50)
 AS
 BEGIN
+BEGIN TRY
     SET NOCOUNT ON
 
     DECLARE @HashPassword varbinary(64)
@@ -13,7 +14,7 @@ BEGIN
         RETURN
     END
 
-    SELECT @HashPassword = hashPassword FROM Users WHERE username = @Username
+    SELECT @HashPassword = hashPassword FROM Admin WHERE username = @Username
 
     IF (HASHBYTES('SHA2_512', @Password) <> @HashPassword)
     BEGIN
@@ -22,4 +23,14 @@ BEGIN
     END
 
     SELECT 'Success' AS Result
-END
+END TRY
+
+    BEGIN CATCH
+        --If there's a problem with the transaction, rollback the transaction
+        SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
+        ROLLBACK TRANSACTION;     
+    END CATCH
+
+
+
+END;

@@ -32,8 +32,8 @@ AS
 BEGIN
 BEGIN TRY
 BEGIN TRANSACTION;
-    INSERT INTO champions VALUES (@name, @gender, @description, @species,@region_name,@splashArt,@quote,@releaseDate)
-    INSERT INTO Abilities VALUES (@P_name, @P_description, @Q_name, @Q_description, @W_name, @W_description, @E_name, @E_description, @R_name, @R_description)
+    INSERT INTO Champion VALUES (@name, @gender, @description, @species,@region_name,@splashArt,@quote,@releaseDate)
+    INSERT INTO Abilities VALUES (@name, @P_name, @P_description, @Q_name, @Q_description, @W_name, @W_description, @E_name, @E_description, @R_name, @R_description)
 
     IF @stories_title IS NOT NULL
         BEGIN
@@ -47,11 +47,9 @@ BEGIN TRANSACTION;
 END TRY
 
     BEGIN CATCH
-    --If there's a problem with the transaction, rollback the transaction
-    PRINT '[ERROR] ' + ERROR_MESSAGE();
-    ROLLBACK TRANSACTION;     
+        --If there's a problem with the transaction, rollback the transaction
+        SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
+        ROLLBACK TRANSACTION;     
     END CATCH
 
-
-
-END;
+END

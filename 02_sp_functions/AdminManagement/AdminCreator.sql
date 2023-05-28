@@ -7,15 +7,15 @@ BEGIN TRY
     IF NOT EXISTS (SELECT * FROM Admin WHERE username = @Username)
         BEGIN
                 INSERT INTO Admin VALUES(@Username, HASHBYTES('SHA2_512', @Password))
-                PRINT 'New Admin created.'
+                SELECT 'New Admin created.' AS Result
         END
     ELSE
         BEGIN
-            PRINT 'Username already taken. Please choose another username.'
+           SELECT 'Username already taken. Please choose another username.' AS Result
         END
 END TRY
     BEGIN CATCH
-        PRINT '[ERROR] ' + ERROR_MESSAGE();  
+        SELECT '[ERROR] ' + ERROR_MESSAGE() AS Result
     END CATCH
 
 END
