@@ -447,6 +447,7 @@
             this.Noxus.TabStop = true;
             this.Noxus.Text = "Noxus";
             this.Noxus.UseVisualStyleBackColor = true;
+            this.Noxus.CheckedChanged += new System.EventHandler(this.Noxus_CheckedChanged);
             // 
             // Bilgewater
             // 
@@ -458,6 +459,7 @@
             this.Bilgewater.TabStop = true;
             this.Bilgewater.Text = "Bilgewater";
             this.Bilgewater.UseVisualStyleBackColor = true;
+            this.Bilgewater.CheckedChanged += new System.EventHandler(this.Bilgewater_CheckedChanged);
             // 
             // Piltover
             // 
@@ -469,6 +471,7 @@
             this.Piltover.TabStop = true;
             this.Piltover.Text = "Piltover";
             this.Piltover.UseVisualStyleBackColor = true;
+            this.Piltover.CheckedChanged += new System.EventHandler(this.Piltover_CheckedChanged);
             // 
             // BandleCity
             // 
@@ -480,6 +483,7 @@
             this.BandleCity.TabStop = true;
             this.BandleCity.Text = "Bandle City";
             this.BandleCity.UseVisualStyleBackColor = true;
+            this.BandleCity.CheckedChanged += new System.EventHandler(this.BandleCity_CheckedChanged);
             // 
             // Zaun
             // 
@@ -491,6 +495,7 @@
             this.Zaun.TabStop = true;
             this.Zaun.Text = "Zaun";
             this.Zaun.UseVisualStyleBackColor = true;
+            this.Zaun.CheckedChanged += new System.EventHandler(this.Zaun_CheckedChanged);
             // 
             // Void
             // 
@@ -502,6 +507,7 @@
             this.Void.TabStop = true;
             this.Void.Text = "The Void";
             this.Void.UseVisualStyleBackColor = true;
+            this.Void.CheckedChanged += new System.EventHandler(this.Void_CheckedChanged);
             // 
             // Freljord
             // 
@@ -513,6 +519,7 @@
             this.Freljord.TabStop = true;
             this.Freljord.Text = "The Freljord";
             this.Freljord.UseVisualStyleBackColor = true;
+            this.Freljord.CheckedChanged += new System.EventHandler(this.Freljord_CheckedChanged);
             // 
             // ShadowIsles
             // 
@@ -524,6 +531,7 @@
             this.ShadowIsles.TabStop = true;
             this.ShadowIsles.Text = "Shadow Isles";
             this.ShadowIsles.UseVisualStyleBackColor = true;
+            this.ShadowIsles.CheckedChanged += new System.EventHandler(this.ShadowIsles_CheckedChanged);
             // 
             // Targon
             // 
@@ -535,6 +543,7 @@
             this.Targon.TabStop = true;
             this.Targon.Text = "Targon";
             this.Targon.UseVisualStyleBackColor = true;
+            this.Targon.CheckedChanged += new System.EventHandler(this.Targon_CheckedChanged);
             // 
             // Shurima
             // 
@@ -546,6 +555,7 @@
             this.Shurima.TabStop = true;
             this.Shurima.Text = "Shurima";
             this.Shurima.UseVisualStyleBackColor = true;
+            this.Shurima.CheckedChanged += new System.EventHandler(this.Shurima_CheckedChanged);
             // 
             // Ixtal
             // 
@@ -557,6 +567,7 @@
             this.Ixtal.TabStop = true;
             this.Ixtal.Text = "Ixtal";
             this.Ixtal.UseVisualStyleBackColor = true;
+            this.Ixtal.CheckedChanged += new System.EventHandler(this.Ixtal_CheckedChanged);
             // 
             // Ionia
             // 
@@ -568,6 +579,7 @@
             this.Ionia.TabStop = true;
             this.Ionia.Text = "Ionia";
             this.Ionia.UseVisualStyleBackColor = true;
+            this.Ionia.CheckedChanged += new System.EventHandler(this.Ionia_CheckedChanged);
             // 
             // Demacia
             // 
@@ -602,6 +614,7 @@
             this.Female.TabStop = true;
             this.Female.Text = "Female";
             this.Female.UseVisualStyleBackColor = true;
+            this.Female.CheckedChanged += new System.EventHandler(this.Female_CheckedChanged);
             // 
             // Male
             // 
@@ -613,6 +626,7 @@
             this.Male.TabStop = true;
             this.Male.Text = "Male";
             this.Male.UseVisualStyleBackColor = true;
+            this.Male.CheckedChanged += new System.EventHandler(this.Male_CheckedChanged);
             // 
             // Champions
             // 

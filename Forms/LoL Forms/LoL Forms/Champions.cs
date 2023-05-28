@@ -201,10 +201,10 @@ namespace LoL_Forms
 
             if (Male.Checked)
             {
-                genderFilter = Male.Text;
+                genderFilter = "Male";
             }else if (Female.Checked)
             {
-                genderFilter= Female.Text;
+                genderFilter= "Female";
             }
 
             // Create a database connection
@@ -213,13 +213,13 @@ namespace LoL_Forms
                 
 
                 // Create a command for the stored procedure
-                using (SqlCommand command = new SqlCommand("FilterChampions", connection))
+                using (SqlCommand command = new ("dbo.FilterChampions", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Add parameters to the command
-                    command.Parameters.AddWithValue("@GenderFilter", genderFilter);
-                    command.Parameters.AddWithValue("@RegionFilter", regionFilter);
+                    command.Parameters.Add("@GenderFilter", SqlDbType.VarChar, 6).Value = genderFilter ?? (object)DBNull.Value;
+                    command.Parameters.Add("@RegionFilter", SqlDbType.VarChar, 50).Value = regionFilter ?? (object)DBNull.Value;
 
                     // Execute the command and retrieve the filtered results
                     using (SqlDataReader reader = command.ExecuteReader())
@@ -243,20 +243,81 @@ namespace LoL_Forms
         {
             applyFilters();
         }
+
+        private void Male_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Female_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Piltover_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Targon_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Shurima_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Freljord_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void BandleCity_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Ixtal_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Ionia_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Void_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Bilgewater_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Zaun_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void Noxus_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
+
+        private void ShadowIsles_CheckedChanged(object sender, EventArgs e)
+        {
+            applyFilters();
+        }
     }
 
 
 
 
-    class Champion
-{
-    public string name, gender, region;
-    public Champion(string n, string g, string r)
-    {
-        this.name = n;
-        this.gender = g;
-        this.region = r;
-    }
-}
+   
 
 }
