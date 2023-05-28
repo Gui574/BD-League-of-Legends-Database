@@ -137,5 +137,12 @@ namespace LoL_Forms
             //    Zaun.SizeMode = PictureBoxSizeMode.StretchImage;
             //}
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            Regions regions_page = new Regions();
+            regions_page.Show();
+            this.Hide();
+        }
     }
 }

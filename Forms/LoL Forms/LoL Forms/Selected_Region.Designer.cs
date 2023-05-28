@@ -32,6 +32,7 @@
             this.name = new System.Windows.Forms.Label();
             this.secret = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.emblem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +71,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Secret";
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(12, 13);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 4;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Selected_Region
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.secret);
             this.Controls.Add(this.name);
@@ -94,5 +106,6 @@
         private Label name;
         private RichTextBox secret;
         private Label label2;
+        private Button Back;
     }
 }

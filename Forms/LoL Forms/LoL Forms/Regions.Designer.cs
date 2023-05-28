@@ -55,6 +55,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Shurima = new System.Windows.Forms.PictureBox();
+            this.Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BandleCity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bilgewater)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Piltover)).BeginInit();
@@ -314,11 +315,22 @@
             this.Shurima.TabStop = false;
             this.Shurima.Click += new System.EventHandler(this.Shurima_Click);
             // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(12, 13);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 28;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // Regions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.Shurima);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -397,5 +409,6 @@
         private Label label13;
         private Label label14;
         private PictureBox Shurima;
+        private Button Back;
     }
 }
