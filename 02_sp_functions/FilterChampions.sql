@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[SearchChampions]
+CREATE PROCEDURE [dbo].[FilterChampions]
     @GenderFilter VARCHAR(6),
     @RegionFilter VARCHAR(50)
 AS

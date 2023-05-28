@@ -91,19 +91,8 @@ stories_title		VARCHAR(70)		NOT NULL	FOREIGN KEY REFERENCES Stories(title),
 												PRIMARY KEY (champion_name, stories_title)
 );
 
-
 CREATE TABLE Admin (
 username			VARCHAR(50)			NOT NULL	PRIMARY KEY,
 hashPassword		varbinary(64)		NOT NULL,
 );
 
-CREATE TABLE Admin (
-username			VARCHAR(50)			NOT NULL	PRIMARY KEY,
-hashPassword		varbinary(64)		NOT NULL,
-);
-
-CREATE TABLE Stats (
-total_champions		INT		NOT NULL,
-gender_stats		INT		NOT NULL,
-total_stories		INT		NOT NULL,
-);
