@@ -23,6 +23,7 @@ IF EXISTS (SELECT * FROM Champion WHERE name = @ChampName)
         DELETE FROM Champion WHERE name = @ChampName;
 
         --Commit the transaction
+        SELECT 'Success' AS Result
         COMMIT TRANSACTION
     END
 ELSE

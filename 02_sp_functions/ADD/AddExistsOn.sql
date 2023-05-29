@@ -8,6 +8,7 @@ BEGIN
 BEGIN TRY
 BEGIN TRANSACTION
     INSERT INTO Exists_On VALUES (@champion_name, @universe_name)
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

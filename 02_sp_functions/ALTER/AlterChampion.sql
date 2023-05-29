@@ -61,7 +61,7 @@ BEGIN TRANSACTION
                 R_description = @R_description
             WHERE champion_name = @name;
         END
-
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

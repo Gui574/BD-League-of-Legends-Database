@@ -10,6 +10,7 @@ BEGIN
 BEGIN TRY
 BEGIN TRANSACTION
     INSERT INTO Alternate_Universe VALUES (@name, @skinLine, @art, @yearCreated)
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

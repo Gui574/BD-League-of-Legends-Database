@@ -8,6 +8,7 @@ BEGIN
 BEGIN TRY
 BEGIN TRANSACTION
     INSERT INTO Participates VALUES (@champion_name, @stories_title)
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

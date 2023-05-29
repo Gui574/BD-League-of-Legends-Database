@@ -11,7 +11,7 @@ BEGIN TRANSACTION
 
     IF NOT EXISTS (SELECT * FROM Admin WHERE username = @Username)
     BEGIN
-        SELECT 'Invalid Username' AS Result
+        SELECT 'Invalid Username or Password' AS Result
         RETURN
     END
 
@@ -19,7 +19,7 @@ BEGIN TRANSACTION
 
     IF (HASHBYTES('SHA2_512', @Password) <> @HashPassword)
     BEGIN
-        SELECT 'Incorrect Password' AS Result
+        SELECT 'Invalid Username or Password' AS Result
         RETURN
     END
 
@@ -33,6 +33,5 @@ END TRY
         ROLLBACK TRANSACTION
     END CATCH
 
+END
 
-
-END;

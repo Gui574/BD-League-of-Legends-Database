@@ -21,6 +21,7 @@ IF EXISTS (SELECT * FROM Stories WHERE title = @stories_title)
             DELETE FROM Participates WHERE champion_name = @champion_name AND stories_title = @stories_title ;
 
             --Commit the transaction
+            SELECT 'Success' AS Result
             COMMIT TRANSACTION
         END
         ELSE

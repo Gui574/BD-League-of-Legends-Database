@@ -19,7 +19,7 @@ BEGIN TRANSACTION
             DECLARE @storyName VARCHAR(70)
 
             --Delete from the dependent tables
-            SELECT @storyName= title from Stories WHERE universe_name = @UniverseName
+            SELECT @storyName = title from Stories WHERE universe_name = @UniverseName
 
             EXEC dbo.DeleteStory @StoryName = @storyName
             
@@ -29,6 +29,7 @@ BEGIN TRANSACTION
             DELETE FROM Alternate_Universe WHERE name = @UniverseName
 
             --Commit the transaction
+            SELECT 'Success' AS Result
             COMMIT TRANSACTION
         END
     ELSE

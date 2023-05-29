@@ -41,14 +41,14 @@ BEGIN TRANSACTION
 
     IF @stories_title IS NOT NULL
         BEGIN
-            INSERT INTO Participates VALUES (@name, @stories_title)
+            EXEC dbo.AddParticipates @name = @name, @stories_title = @stories_title
         END
     
     IF @universe_name IS NOT NULL
         BEGIN
-            INSERT INTO Exists_On VALUES (@name, @universe_name)
+            EXEC dbo.AddExistsOn @name = @name, @universe_name = @universe_name
         END
-        
+    SELECT 'Success' AS Result   
     COMMIT TRANSACTION
 END TRY
 

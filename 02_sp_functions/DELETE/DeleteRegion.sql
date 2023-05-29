@@ -28,6 +28,7 @@ IF EXISTS (SELECT * FROM Region WHERE name = @RegionName)
 
        
         --Commit the transaction
+        SELECT 'Success' AS Result
         COMMIT TRANSACTION
     END
 ELSE

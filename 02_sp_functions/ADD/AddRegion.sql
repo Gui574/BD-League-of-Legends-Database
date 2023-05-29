@@ -8,6 +8,7 @@ BEGIN
 BEGIN TRY
 BEGIN TRANSACTION
     INSERT INTO Region VALUES (@name, @emblem)
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

@@ -21,6 +21,7 @@ IF EXISTS (SELECT * FROM Alternate_Universe WHERE name = @universe_name)
             DELETE FROM Exists_On WHERE champion_name = @champion_name AND universe_name = @universe_name ;
 
             --Commit the transaction
+            SELECT 'Success' AS Result
             COMMIT TRANSACTION
         END
         ELSE

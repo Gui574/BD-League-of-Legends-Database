@@ -23,7 +23,7 @@ BEGIN TRANSACTION
                 
             WHERE title = @title;
         END
-
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 

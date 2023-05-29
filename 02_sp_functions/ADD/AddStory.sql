@@ -11,6 +11,7 @@ BEGIN
 BEGIN TRY
 BEGIN TRANSACTION
     INSERT INTO Stories VALUES (@title, @author, @link, @type, @universe_name)
+    SELECT 'Success' AS Result
     COMMIT TRANSACTION
 END TRY
 
