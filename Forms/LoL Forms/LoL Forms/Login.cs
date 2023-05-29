@@ -71,7 +71,7 @@ namespace LoL_Forms
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            Password.UseSystemPasswordChar = true;
         }
     }
 }

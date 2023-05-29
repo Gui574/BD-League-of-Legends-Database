@@ -60,9 +60,9 @@
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(546, 465);
+            this.Reset.Location = new System.Drawing.Point(531, 465);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(81, 31);
+            this.Reset.Size = new System.Drawing.Size(96, 31);
             this.Reset.TabIndex = 97;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;

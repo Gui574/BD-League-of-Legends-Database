@@ -22,6 +22,10 @@ namespace LoL_Forms
 
         private void Universes_Load(object sender, EventArgs e)
         {
+            Name.ReadOnly = true;
+            SkinLine.ReadOnly = true;
+            YearCreated.ReadOnly = true;
+            Champions.ReadOnly = true;
             // Query the database to retrieve the champion data
             string query = "SELECT * FROM Alternate_Universe";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.GetConnection());

@@ -49,6 +49,24 @@ namespace LoL_Forms
             radioButtons.Add(Zaun);
             radioButtons.Add(ShadowIsles);
 
+            champName.ReadOnly = true;
+            champDescription.ReadOnly = true;
+            champGender.ReadOnly = true;
+            champQuote.ReadOnly = true;
+            champRegion.ReadOnly = true;
+            champRelease.ReadOnly = true;
+            champSpecies.ReadOnly = true;
+            QDesc.ReadOnly = true;
+            QName.ReadOnly = true;
+            WName.ReadOnly = true;
+            WDesc.ReadOnly = true;
+            EName.ReadOnly = true;
+            EDesc.ReadOnly = true;
+            RName.ReadOnly = true;
+            RDesc.ReadOnly = true;
+            PDesc.ReadOnly = true;
+            PName.ReadOnly = true;
+
             // Fetch data from the database and bind it to form controls
             LoadChampions();
         }

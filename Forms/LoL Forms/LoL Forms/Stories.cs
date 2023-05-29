@@ -27,6 +27,13 @@ namespace LoL_Forms
 
         private void Stories_Load(object sender, EventArgs e)
         {
+            Title.ReadOnly = true;
+            Author.ReadOnly = true;
+            Type.ReadOnly = true;
+            Link.ReadOnly = true;
+            UniverseName.ReadOnly = true;
+            Champion.ReadOnly = true;
+
             string query = "SELECT title,author,link,type,universe_name FROM Stories";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.GetConnection());
             SqlDataReader reader = command.ExecuteReader();
