@@ -29,12 +29,11 @@ namespace LoL_Forms
 
             champDescription.ReadOnly = true;
 
-            //this.BackgroundImage = Image.FromFile("C:/Users/guiml/Downloads/league.jpg");
+            
 
             // Set the background image layout
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            // Establish the database connection
-
+            
             radioButtons.Add(Noxus);
             radioButtons.Add(Demacia);
             radioButtons.Add(Piltover);
@@ -67,7 +66,7 @@ namespace LoL_Forms
             PDesc.ReadOnly = true;
             PName.ReadOnly = true;
 
-            // Fetch data from the database and bind it to form controls
+            // 
             LoadChampions();
         }
 
@@ -230,7 +229,7 @@ namespace LoL_Forms
                 genderFilter= "Female";
             }
 
-            // Create a database connection
+            
             using (SqlConnection connection = DatabaseConnection.GetConnection())
             {
                 
