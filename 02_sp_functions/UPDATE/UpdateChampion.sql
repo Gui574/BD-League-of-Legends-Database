@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[AlterChampion]
+CREATE PROCEDURE [dbo].[UpdateChampion]
 
 @name VARCHAR(25),
 @gender VARCHAR(6),
@@ -34,7 +34,7 @@ BEGIN TRY
 BEGIN TRANSACTION
 
     --Check if the champion exists
-    IF EXISTS (SELECT * FROM Champion WHERE name = @name)
+    IF EXISTS (SELECT * FROM Champion WITH (INDEX(idx_Champion_Name)) WHERE name = @name)
         BEGIN
             UPDATE Champion
             SET 

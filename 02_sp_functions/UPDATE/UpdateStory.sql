@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[AlterStory]
+CREATE PROCEDURE [dbo].[UpdateStory]
 
 @title			VARCHAR(70),
 @author			VARCHAR(20),

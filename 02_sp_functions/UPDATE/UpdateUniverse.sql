@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[AlterUniverse]
+CREATE PROCEDURE [dbo].[UpdateUniverse]
 
 @name			VARCHAR(25),
 @skinLine		VARCHAR(50),

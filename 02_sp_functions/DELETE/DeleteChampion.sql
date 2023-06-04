@@ -11,7 +11,7 @@ BEGIN TRY
 BEGIN TRANSACTION
 
 --Check if the champion exists
-IF EXISTS (SELECT * FROM Champion WHERE name = @ChampName)
+IF EXISTS (SELECT * FROM Champion WITH (INDEX(idx_Champion_Name)) WHERE name = @ChampName)
     BEGIN
 
         --Delete from the dependent tables

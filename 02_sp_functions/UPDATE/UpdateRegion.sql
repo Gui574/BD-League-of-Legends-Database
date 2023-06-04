@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[AlterRegion]
+CREATE PROCEDURE [dbo].[UpdateRegion]
 
 @name			VARCHAR(50),
 @emblem			VARCHAR(350)

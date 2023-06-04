@@ -4,7 +4,7 @@ CREATE PROCEDURE [dbo].[FilterChampions]
 AS
 BEGIN
     -- Start with the base query (always true, returns all)
-     DECLARE @sqlQuery NVARCHAR(MAX) = 'SELECT * FROM Champion WHERE 1=1';
+     DECLARE @sqlQuery NVARCHAR(MAX) = 'SELECT * FROM Champion WITH (INDEX(idx_Champion_Name)) WHERE 1=1';
 
     -- Add conditions based on the variables
     IF @GenderFilter IS NOT NULL
