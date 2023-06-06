@@ -30,12 +30,10 @@
         {
             this.comboBoxRegions = new System.Windows.Forms.ComboBox();
             this.Edit = new System.Windows.Forms.Button();
-            this.Name = new System.Windows.Forms.RichTextBox();
             this.EmblemLink = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
@@ -44,14 +42,14 @@
             // comboBoxRegions
             // 
             this.comboBoxRegions.FormattingEnabled = true;
-            this.comboBoxRegions.Location = new System.Drawing.Point(111, 127);
+            this.comboBoxRegions.Location = new System.Drawing.Point(104, 194);
             this.comboBoxRegions.Name = "comboBoxRegions";
             this.comboBoxRegions.Size = new System.Drawing.Size(121, 23);
             this.comboBoxRegions.TabIndex = 0;
             // 
             // Edit
             // 
-            this.Edit.Location = new System.Drawing.Point(132, 176);
+            this.Edit.Location = new System.Drawing.Point(131, 228);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(75, 23);
             this.Edit.TabIndex = 1;
@@ -59,17 +57,9 @@
             this.Edit.UseVisualStyleBackColor = true;
             this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
-            // Name
-            // 
-            this.Name.Location = new System.Drawing.Point(486, 127);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(116, 23);
-            this.Name.TabIndex = 2;
-            this.Name.Text = "";
-            // 
             // EmblemLink
             // 
-            this.EmblemLink.Location = new System.Drawing.Point(460, 238);
+            this.EmblemLink.Location = new System.Drawing.Point(461, 177);
             this.EmblemLink.Name = "EmblemLink";
             this.EmblemLink.Size = new System.Drawing.Size(169, 40);
             this.EmblemLink.TabIndex = 3;
@@ -97,26 +87,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(512, 220);
+            this.label3.Location = new System.Drawing.Point(510, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Emblem Link";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(527, 109);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Name";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(122, 96);
+            this.label6.Location = new System.Drawing.Point(113, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 15);
             this.label6.TabIndex = 9;
@@ -150,15 +131,13 @@
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmblemLink);
-            this.Controls.Add(this.Name);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.comboBoxRegions);
-            //this.Name = "ManageRegion";
+            this.Name = "ManageRegion";
             this.Text = "DeleteRegion";
             this.Load += new System.EventHandler(this.ManageRegion_Load_1);
             this.ResumeLayout(false);
@@ -170,12 +149,10 @@
 
         private ComboBox comboBoxRegions;
         private Button Edit;
-        private RichTextBox Name;
         private RichTextBox EmblemLink;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label5;
         private Label label6;
         private Button Save;
         private Button Back;

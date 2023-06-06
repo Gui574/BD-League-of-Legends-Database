@@ -141,7 +141,7 @@ namespace LoL_Forms
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@UniverseName", comboBoxUniverses.SelectedItem);
+                        command.Parameters.AddWithValue("@UniverseName", comboBoxUniverses.SelectedItem.ToString());
                         
 
 

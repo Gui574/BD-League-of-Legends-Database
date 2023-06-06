@@ -223,7 +223,8 @@ namespace LoL_Forms
                     command.Parameters.AddWithValue("@E_description", EDesc.Text);
                     command.Parameters.AddWithValue("@R_name", RName.Text);
                     command.Parameters.AddWithValue("@R_description", RDesc.Text);
-                    
+                   
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())

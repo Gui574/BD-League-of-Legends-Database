@@ -44,7 +44,7 @@ namespace LoL_Forms
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    Name.Text = comboBoxRegions.SelectedItem.ToString();
+                    //Name.Text = comboBoxRegions.SelectedItem.ToString();
                     EmblemLink.Text = reader["emblem"].ToString();
                 }
                 reader.Close();
@@ -54,7 +54,7 @@ namespace LoL_Forms
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if(EmblemLink.Text!= null && Name.Text!= null) {
+            if(EmblemLink.Text!= null ) {
                 string result = null;
                 using (SqlConnection connection = DatabaseConnection.GetConnection())
                 {
@@ -62,7 +62,7 @@ namespace LoL_Forms
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@name", Name.Text);
+                        command.Parameters.AddWithValue("@name", comboBoxRegions.SelectedItem.ToString());
                         command.Parameters.AddWithValue("@emblem", EmblemLink.Text);
                         
                         using (SqlDataReader reader = command.ExecuteReader())
